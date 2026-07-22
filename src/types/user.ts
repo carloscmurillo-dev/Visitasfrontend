@@ -1,0 +1,10 @@
+export interface User {
+  id: string;
+  avatar?: string;
+  email: string;
+  name: string;
+  gln: string;
+  UserType: string;
+  
+  [key: string]: any;
+}

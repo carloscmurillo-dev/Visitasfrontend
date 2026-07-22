@@ -1,0 +1,4174 @@
+
+          <TableRow>
+              {itmDiscounts && itmDiscounts.find(q => q.ruleCode == 'CONFIDENCIAL') &&
+                <>
+                  <TableCell>
+                    {itmDiscounts.find(q => q.ruleCode == 'CONFIDENCIAL')?.ruleCode}
+                  </TableCell>
+                  <TableCell>
+                    <TextField type={'number'} disabled={user.UserType!="3"}
+                      value={confidencial}
+                      onChange={handleConfidencialDiscountChange}
+                    />
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'CONFIDENCIAL')?.startDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={dcsdate}
+                          onChange={handleDCsfecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'CONFIDENCIAL')?.endDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={dcedate}
+                          onChange={handleDCefecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                </>
+              }
+            </TableRow>
+            <TableRow>
+              {itmDiscounts && itmDiscounts.find(q => q.ruleCode == 'FIJO') &&
+                <>
+                  <TableCell>
+                    {itmDiscounts.find(q => q.ruleCode == 'FIJO')?.ruleCode}
+                  </TableCell>
+                  <TableCell>
+                    <TextField type={'number'} disabled={user.UserType!="3"}
+                      value={fijo}
+                      onChange={handleFijoDiscountChange}
+                    />
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'FIJO')?.startDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={dfisdate}
+                          onChange={handleDFIsfecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'FIJO')?.endDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={dfiedate}
+                          onChange={handleDFIefecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                </>
+              }
+            </TableRow>
+            <TableRow>
+              {itmDiscounts && itmDiscounts.find(q => q.ruleCode == 'NO DEVOLUCION') &&
+                <>
+                  <TableCell>
+                    {itmDiscounts.find(q => q.ruleCode == 'NO DEVOLUCION')?.ruleCode}
+                  </TableCell>
+                  <TableCell>
+                    <TextField type={'number'} disabled={user.UserType!="3"}
+                      value={nodevolucion}
+                      onChange={handleNoDevolucionDiscountChange}
+                    />
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'NO DEVOLUCION')?.startDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={dndsdate}
+                          onChange={handleDNDsfecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'NO DEVOLUCION')?.endDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={dndedate}
+                          onChange={handleDNDefecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                </>
+              }
+            </TableRow>
+            <TableRow>
+              {itmDiscounts && itmDiscounts.find(q => q.ruleCode == '?') &&
+                <>
+                  <TableCell>
+                    PROMOCIONAL{/* {itmDiscounts.find(q => q.ruleCode == '?')?.ruleCode} */}
+                  </TableCell>
+                  <TableCell>
+                    <TextField type={'number'} disabled={user.UserType!="3"}
+                      value={promocional}
+                      onChange={handlePromocionalDiscountChange}
+                    />
+
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == '?')?.startDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={paesdate}
+                          onChange={handleDCsfecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == '?')?.endDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={paeedate}
+                          onChange={handleDCsfecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                </>
+              }
+            </TableRow>
+            <TableRow>
+              {itmDiscounts && itmDiscounts.find(q => q.ruleCode == 'DDC') &&
+                <>
+                  <TableCell>
+                    {itmDiscounts.find(q => q.ruleCode == 'DDC')?.ruleCode}
+                  </TableCell>
+                  <TableCell>
+                    <TextField type={'number'} disabled={user.UserType!="3"}
+                      value={ddc}
+                      onChange={handleDDCDiscountChange}
+                    />
+
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'DDC')?.startDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={ddcsdate}
+                          onChange={handleDDCsfecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'DDC')?.endDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={ddcedate}
+                          onChange={handleDDCefecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                </>
+              }
+            </TableRow>
+
+
+
+VERSION x
+import { ChangeEvent, Fragment, MouseEvent, useEffect, useState } from 'react';
+import type { FC } from 'react';
+import { addMonths, format } from 'date-fns';
+import PropTypes from 'prop-types';
+import { toast } from 'react-hot-toast';
+import {
+  Avatar,
+  Box, Button, Card, CardContent, CardMedia,Checkbox, Chip, Divider, FormControl, Grid, IconButton, InputLabel, Link, ListItemText, MenuItem, OutlinedInput, Select,
+  SelectChangeEvent, Switch, Table, TableBody, TableCell, TableHead, TablePagination, TableRow, TextField, Typography
+} from '@mui/material';
+import { ChevronDown as ChevronDownIcon } from '../../../icons/chevron-down';
+import { ChevronRight as ChevronRightIcon } from '../../../icons/chevron-right';
+import type { Item } from '../../../types/product';
+import { Scrollbar } from '../../scrollbar';
+import { SeverityPill } from '../../severity-pill';
+import { productApi, ProductStatus } from 'src/__fake-api__/product-api';
+import { Category } from 'src/types/APIcategory';
+import { SubCategory } from 'src/types/APISubCategory';
+import { PropertyListItem } from 'src/components/property-list-item';
+import { BuyerType } from 'src/types/buyerTypes';
+import { useAuth } from 'src/hooks/use-auth';
+import { useRouter } from 'next/router'
+import { Po } from 'src/types/pos';
+import { ItemsDiscount } from 'src/types/IitemDiscounts';
+import { TiposRegistro } from 'src/types/APITiposRegistro';
+import { FileDropzone } from '../../file-dropzone';
+import { fileToBase64 } from '../../../utils/file-to-base64';
+import { styled } from '@mui/material/styles';
+import { ConstructionOutlined, DoDisturb } from '@mui/icons-material';
+import { DatePicker, DateTimePicker } from '@mui/lab';
+
+import { APIUser } from 'src/types/APIUser';
+import { authApi } from 'src/__fake-api__/auth-api';
+
+interface ProductListTableProps {
+  onPageChange: (event: MouseEvent<HTMLButtonElement> | null, newPage: number) => void;
+  onRowsPerPageChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  page: number;
+  products: Item[];
+  categories: Category[];
+  pos: Po[];
+  tiposregistro : TiposRegistro[];
+  productsCount: number;
+  rowsPerPage: number;
+  cambioPrecios: boolean;
+  
+}
+
+export const ProductListTable: FC<ProductListTableProps> = (props) => {
+  const {
+    onPageChange,
+    onRowsPerPageChange,
+    page,
+    products,
+    pos,
+    tiposregistro,
+    productsCount,
+    rowsPerPage,
+    categories,
+    cambioPrecios,
+    
+    ...other
+  } = props;
+  const [openProduct, setOpenProduct] = useState<string | null>(null);
+  const [checked, setChecked] = useState<boolean>(false);
+
+  const [checkedSKU, setCheckedSKU] = useState<boolean>(false);
+
+  const [aceptaDevolucion, setAceptaDevolucion] = useState<boolean>(false);
+  const { user } = useAuth();
+  const router = useRouter();
+  const [confidencial, setConfidencial] = useState<string>('0');
+  const [amountCosto, setAmountCosto] = useState<string>('0');
+  const [introduccion, setIntroduccion] = useState<string>('0');
+  const [fijo, setFijo] = useState<string>('0');
+  const [promocional, setPromocional] = useState<string>('0');
+  const [ddc,setDDC] = useState<string>('0');
+  const [tax,setTAX] = useState<string>('0');
+
+  const [dfisdate,setDfisdate] =  useState<Date | null>()
+  const [dfiedate,setDfiedate] =  useState<Date | null>()
+  const [dcsdate,setDcsdate] =  useState<Date | null>()
+  const [dcedate,setDcedate] =  useState<Date | null>()
+  const [ddcsdate,setDdcsdate] =  useState<Date | null>()
+  const [ddcedate,setDdcedate] =  useState<Date | null>()
+  const [deisdate,setDeisdate] =  useState<Date | null>()
+  const [deiedate,setDeiedate] =  useState<Date | null>()
+  const [dndsdate,setDndsdate] =  useState<Date | null>()
+  const [dndedate,setDndedate] =  useState<Date | null>()
+  const [paesdate,setPaesdate] =  useState<Date | null>()
+  const [paeedate,setPaeedate] =  useState<Date | null>()
+  const [taesdate,setTaesdate] =  useState<Date | null>()
+  const [taeedate,setTaeedate] =  useState<Date | null>()
+  const [taxsdate,setTaxsdate] =  useState<Date | null>()
+  const [taxedate,setTaxedate] =  useState<Date | null>()
+
+  const [usuarioload, setUsuarioload] = useState<APIUser | null>(null);
+  
+
+
+  const [nodevolucion,setNoDevolucion] = useState<string>('0');
+  const [comercialLongDescription, setComercialLongDescription] = useState<string>('');
+  const [comercialShortDescription, setComercialShortDescription] = useState<string>('');
+  const [comercialPubliDescription, setComercialPubliDescription] = useState<string>('');
+
+  const [comercialFonetDescription, setComercialFonetDescription] = useState<string>('');
+  const [comercialHablaDescription, setComercialHablaDescription] = useState<string>('');
+
+  const [grossCostAmount, setGrossCostAmount] = useState<number>(0);
+  const [periPrice, setPeriPrice] = useState<number>(0);
+  const [superPrice, setSuperPrice] = useState<number>(0);
+  const [sarettoPrice, setSarettoPrice] = useState<number>(0);
+  const [superviquezPrice, setSuperviquezPrice] = useState<number>(0);
+
+  const [superviquezCostUtility, setSuperviquezCostUtility] = useState<number>(0);
+  const [subCategories, setSubCategories] = useState<SubCategory[]>();
+  const [posID, setPosID] = useState<number | null>(null);
+  const [price, setPrice] = useState<number>(0);
+  const [itemFileCod, setItemFileCod] = useState<string>();
+  const [sarettoCostSale, setSarettoCostSale] = useState<number>(0);
+  const [sarettoCostUtility, setSarettoCostUtility] = useState<number>(0);
+  const [periCostSale, setPeriCostSale] = useState<number>(0);
+  const [superviquezCostSale, setSuperviquezCostSale] = useState<number>(0);
+  const [periCostUtility, setPeriCostUtility] = useState<number>(0);
+  const [supercomproCostSale, setSupercomproCostSale] = useState<number>(0);
+  const [supercomproCostUtility, setSupercomproCostUtility] = useState<number>(0);
+  const [categoryIdSelected, setCategoryIdSelected] = useState<number | null>(null);
+  const [subCategoryIdSelected, setSubCategoryIdSelected] = useState<number | null>(null);
+  const [tipoRegistroIdSelected, setTipoRegistroIdSelected] = useState<number | null>(null);
+  const [buyerTypeSelected, setBuyerTypeSelected] = useState<number | null>(null);
+  const [itmDiscounts, setItmDiscounts] = useState<ItemsDiscount[]>();
+  const [buyerTypes, setBuyerTypes] = useState<BuyerType[]>();
+  const [descuentoFijo, setdescuentoFijo] = useState(0)
+
+  const [SkuSustituciones, setskySustituciones] = useState<Item[]>();
+
+
+
+  const [IdSegmentacionSelected, setIdSegmentacionSelected] = useState<number | null>(null);
+
+  const [IdAreaManejoSelected, setIdAreaManejoSelected] = useState<number | null>(null);
+
+  const [ProyMenVtasCol, setProyMenVtasCol] = useState(0);
+  const [ProyMenVtasUni, setProyMenVtasUni] = useState(0);
+  
+  const [skuSustitucionSelected, setSkuSustitucionSelected] = useState('');
+
+  
+
+  const [UbicacionCedi, setUbicacionCedi] = useState<string>('');
+
+  const [foto1,setfoto1] = useState('/static/mock-images/covers/caja.png')
+  const [foto2,setfoto2] = useState('/static/mock-images/covers/caja.png')
+  const [foto3,setfoto3] = useState('/static/mock-images/covers/caja.png')
+  const [foto4,setfoto4] = useState('/static/mock-images/covers/caja.png')
+  const [foto5,setfoto5] = useState('/static/mock-images/covers/caja.png')
+
+  const ASegmentacionArticulo = [
+    {
+      "idSegmentacion": 1,
+      "dsSegmentacion": "Marca Privada",
+     
+    },
+     {
+      "idSegmentacion": 2,
+      "dsSegmentacion": "Suministros",
+     
+    },
+     {
+      "idSegmentacion": 3,
+      "dsSegmentacion": "PYME",
+     
+    },
+     {
+      "idSegmentacion": 4,
+      "dsSegmentacion": "Regular",
+     
+    },
+   
+  ]
+
+
+  const AareaManejo = [
+    {
+      "idAreaManejo": 1,
+      "dsAreaManejo": "PLANTA",
+     
+    },
+    {
+      "idAreaManejo": 2,
+      "dsAreaManejo": "CROSS DOCKING",
+     
+    },
+    {
+      "idAreaManejo": 3,
+      "dsAreaManejo": "MENUDEO",
+     
+    },
+    
+   
+  ]
+  
+
+
+  const posts = [
+    
+    {
+      id: '24b76cac9a128cd949747080',
+     
+      category: 'F',
+      cover: foto1,
+      title: 'FOTO UNO'
+    },
+    {
+      
+      id: 'a9c19d0caf2ca91020aacd1f',
+   
+      category: 'L',
+      cover: foto2,
+     title: 'FOTO DOS'
+    },
+    {
+      id: '44df90cbf89963b8aa6258c7d',
+    
+      category: 'A',
+      cover: foto3,
+      title: 'FOTO TRES'
+    },
+    {
+      id: 'a9c19d0caf2ca91020aacd1f2',
+   
+      category: 'G',
+      cover: foto4,
+     title: 'FOTO CUATRO'
+    },
+    {
+      id: '44df90cbf89963b8aa625c7d2',
+    
+      category: 'K',
+      cover: foto5,
+      title: 'FOTO CINCO'
+    }
+  ];
+
+  const handleDropCover1 = async ([file]: File[]) => {
+    const data = await fileToBase64(file) as string;
+    {setfoto1(data);} 
+  };
+
+  const handleDropCover2 = async ([file]: File[]) => {
+   const data = await fileToBase64(file) as string;
+   {setfoto2(data);} 
+  };
+
+  const handleDropCover3 = async ([file]: File[]) => {
+   const data = await fileToBase64(file) as string;
+   {setfoto3(data);} 
+  };
+
+  const handleDropCover4 = async ([file]: File[]) => {
+    const data = await fileToBase64(file) as string;
+    {setfoto4(data);} 
+   };
+
+   const handleDropCover5 = async ([file]: File[]) => {
+    const data = await fileToBase64(file) as string;
+    {setfoto5(data);} 
+   };
+
+  const handleRemove1 = (): void => {
+    setfoto1('/static/mock-images/covers/caja.png');
+  };
+  const handleRemove2 = (): void => {
+    setfoto2('/static/mock-images/covers/caja.png');
+  };
+  const handleRemove3 = (): void => {
+    setfoto3('/static/mock-images/covers/caja.png');
+  };
+
+
+  //user.formActive = true ;
+
+ 
+
+
+  
+//console.log('descuentos:',products)
+  useEffect(() => {
+    const loadInfo = async () => {
+
+      console.log('USER ID',user.id)
+
+     
+     
+      const dataUser = await authApi.GetUser(Number(user.id)); 
+
+      setdescuentoFijo(dataUser.descuentoFijoProv)
+
+      const data = await productApi.getBuyerTypes();
+      const discounts = await productApi.getItemDicounts(openProduct ?? "");
+      setItmDiscounts(discounts);
+      //console.log('Descuentos:' , discounts)
+      setBuyerTypes(data);
+      const productSelected = products.find(q => q.gtin == openProduct ?? "");
+      
+      console.log('PRODUCTO CARGADOS------------------------------>',productSelected)
+
+      const dataSkuSust = await productApi.getProductsCambPrecio(user.gln);
+      setskySustituciones(dataSkuSust)
+     
+
+      console.log('TIPO REGISTRO',productSelected)
+
+      setCategoryIdSelected(Number(productSelected?.CategoryId))
+      setSubCategoryIdSelected(Number(productSelected?.SubCategoryId))
+
+     
+    setTipoRegistroIdSelected(Number(productSelected?.TipoRegistro_ID))
+    setBuyerTypeSelected(Number(productSelected?.TipoCompraId));
+    setIdSegmentacionSelected(Number(productSelected?.SegmentacionArticulo));
+    setIdAreaManejoSelected(Number(productSelected?.AreaManejo))
+   
+      
+      console.log('CARGA DE LA CATEGORIA',categoryIdSelected)
+
+      if(productSelected?.CompraEnUnidad) {
+                   setChecked(true)} 
+                   else 
+                   {setChecked(false)}
+      
+      console.log('LA CATEGORIA',categoryIdSelected)
+
+
+
+      const gross = Number(grossCost(productSelected, discounts).toFixed(2));
+      setGrossCostAmount(gross - ( gross * descuentoFijo / 100 ));
+
+      setDfisdate(new Date(itmDiscounts?.find(q => q.ruleCode == 'FIJO')?.startDate ?? new Date()))
+      setDfiedate(new Date(itmDiscounts?.find(q => q.ruleCode == 'FIJO')?.endDate ?? new Date()))
+
+      setDdcsdate(new Date(itmDiscounts?.find(q => q.ruleCode == 'DDC')?.startDate ?? new Date()))
+      setDdcedate(new Date(itmDiscounts?.find(q => q.ruleCode == 'DDC')?.endDate ?? new Date()))
+
+      setDeisdate(new Date(itmDiscounts?.find(q => q.ruleCode == 'INTRODUCCION')?.startDate ?? new Date()))
+      setDeiedate(new Date(itmDiscounts?.find(q => q.ruleCode == 'INTRODUCCION')?.endDate ?? new Date()))
+
+      setDcsdate(new Date(itmDiscounts?.find(q => q.ruleCode == 'CONFIDENCIAL')?.startDate ?? new Date()))
+      setDcedate(new Date(itmDiscounts?.find(q => q.ruleCode == 'CONFIDENCIAL')?.endDate ?? new Date()))
+
+      setDndsdate(new Date(itmDiscounts?.find(q => q.ruleCode == 'NO DEVOLUCION')?.startDate ?? new Date()))
+      setDndedate(new Date(itmDiscounts?.find(q => q.ruleCode == 'NO DEVOLUCION')?.endDate ?? new Date()))
+
+      setPaesdate(new Date(itmDiscounts?.find(q => q.ruleCode == 'PROMOCIONAL')?.startDate ?? new Date()))
+      setPaeedate(new Date(itmDiscounts?.find(q => q.ruleCode == 'PROMOCIONAL')?.endDate ?? new Date()))
+
+      setTaesdate(new Date(itmDiscounts?.find(q => q.ruleCode == 'CENTRO DE DISTRIBUCION')?.startDate ?? new Date()))
+      setTaeedate(new Date(itmDiscounts?.find(q => q.ruleCode == 'CENTRO DE DISTRIBUCION')?.endDate ?? new Date()))
+
+      setTaxsdate(new Date(itmDiscounts?.find(q => q.ruleCode == 'IMPUESTO')?.startDate ?? new Date()))
+      setTaxedate(new Date(itmDiscounts?.find(q => q.ruleCode == 'IMPUESTO')?.endDate ?? new Date()))
+
+
+
+
+
+
+   console.log('CARGA DE LA FECHA',dfisdate)
+      
+      //alert('Paso 2')
+console.log('valor antes:',periConIVA)
+
+if (productSelected?.PeriConIVA ) { }
+else {setPeriConIVA(((((gross) * (periCostSale + 100)) / 100) * (((100 + (Number(itmDiscounts?.find(q => q.gtin == productSelected?.gtin && q.ruleType == 'TAX')?.value ?? 0))) / 100))).toFixed(2));}
+
+if (productSelected?.PeriSinIVA ) { }
+else {setPeriSinIVA(((gross * (periCostSale + 100)) / 100).toFixed(2));}
+  
+if (productSelected?.SupercomproConIVA ) { }
+else {setSupercomproConIVA(((((gross) * (supercomproCostSale + 100)) / 100) * (((100 + (Number(itmDiscounts?.find(q => q.gtin == productSelected?.gtin && q.ruleType == 'TAX')?.value ?? 0))) / 100))).toFixed(2));}
+
+if (productSelected?.SupercomproSinIVA ) { }
+else {setSupercomproSinIVA((((gross) * (supercomproCostSale + 100)) / 100).toFixed(2));}
+      
+if (productSelected?.SarettoConIVA ) { }
+else {     setSarettoConIVA(((((gross) * (sarettoCostSale + 100)) / 100) * (((100 + (Number(itmDiscounts?.find(q => q.gtin == productSelected?.gtin && q.ruleType == 'TAX')?.value ?? 0))) / 100))).toFixed(2));}
+
+if (productSelected?.SarettoSinIVA ) { }
+else {setSarettoSinIVA((((gross) * (sarettoCostSale + 100)) / 100).toFixed(2));}
+    
+if (productSelected?.superviquezConIVA ) { }
+else {setSuperviquezConIVA(((((gross) * (superviquezCostSale + 100)) / 100) * (((100 + (Number(itmDiscounts?.find(q => q.gtin == productSelected?.gtin && q.ruleType == 'TAX')?.value ?? 0))) / 100))).toFixed(2));}
+
+if (productSelected?.superviquezSinIVA ) { }
+else {setSuperviquezSinIVA(((gross * (superviquezCostSale + 100)) / 100).toFixed(2));}      
+ 
+           
+      
+     
+// console.log('Valores gross, periCostSale',gross,periCostSale)
+// console.log('valor despues:',periConIVA)
+
+      //alert('SE ACTIVO DESCUENTO')
+    }
+    loadInfo();
+  }, [introduccion])      //[confidencial, introduccion, fijo, promocional,ddc,nodevolucion])
+
+
+
+ 
+
+
+
+
+// --------------------------------------------------------------------------------------------------------
+// MANEJADOR DEL CLIC DE LINEA DE PRODUCTOS 
+// --------------------------------------------------------------------------------------------------------
+
+const handleOpenProduct = async (productId: string): Promise<void> => {
+    setOpenProduct((prevValue) => (prevValue === productId ? null : productId));
+    const data = await productApi.getBuyerTypes();
+    const discounts = await productApi.getItemDicounts(productId);
+    setItmDiscounts(discounts);
+    setBuyerTypes(data);
+
+   
+
+console.log('VALUE',openProduct)
+console.log('PREV VALUE',productId)
+   
+
+
+    const productSelected = products.find(q => q.gtin == productId);
+    const gross = grossCost(productSelected, discounts);
+
+    if(!openProduct)  {
+
+      const id= toast.loading('Cargando Fotos...')
+      const fotos = await productApi.getFotos(productSelected!.glnOfManufacturer,productSelected!.gtin);
+   
+      toast.dismiss(id)
+
+    // console.log('LAS FOTICOS',fotos)
+     console.log('LA FOTO',fotos[0].FotoProductoFrente)
+,
+     setfoto1(fotos[0].FotoProductoFrente ? b64DecodeUnicode(fotos[0].FotoProductoFrente): '/static/mock-images/covers/caja.png')
+    // setfoto2(fotos[0].FotoProductoLado ? b64DecodeUnicode(fotos[0].FotoProductoLado): '/static/mock-images/covers/caja.png')
+    // setfoto3(fotos[0].FotoProducto5 ? b64DecodeUnicode(fotos[0].FotoProducto5): '/static/mock-images/covers/caja.png')
+    // setfoto4(fotos[0].FotoProducto4 ? b64DecodeUnicode(fotos[0].FotoProducto4): '/static/mock-images/covers/caja.png')
+    // setfoto5(fotos[0].FotoProducto5 ? b64DecodeUnicode(fotos[0].FotoProducto5): '/static/mock-images/covers/caja.png')
+  }
+
+  else
+  {
+    setfoto1('/static/mock-images/covers/caja.png')
+  }
+
+
+    setTipoRegistroIdSelected(Number(productSelected?.TipoRegistro_ID))
+    setBuyerTypeSelected(Number(productSelected?.TipoCompraId));
+    setIdSegmentacionSelected(Number(productSelected?.SegmentacionArticulo));
+    setIdAreaManejoSelected(Number(productSelected?.AreaManejo))
+
+   
+   
+    const dataSubcate = await productApi.getSubCategories(Number(productSelected?.CategoryId));
+    setSubCategories(dataSubcate)
+    setCategoryIdSelected(productSelected?.SubCategoryId ?? 0);
+
+
+    console.log('productSelected ------------------>',productSelected)
+
+   
+
+ 
+
+  setCategoryIdSelected(Number(productSelected?.CategoryId))
+  setSubCategoryIdSelected(Number(productSelected?.SubCategoryId))
+
+  
+   
+
+  setGrossCostAmount(gross - ( gross * descuentoFijo / 100 ))
+    if (productSelected?.SupercomproConIVA) {
+      setSupercomproConIVA(productSelected?.SupercomproConIVA.toString())
+    }
+    else {
+      setSupercomproConIVA(((((gross) * (supercomproCostSale + 100)) / 100) * (((100 + (Number(itmDiscounts?.find(q => q.gtin == productSelected?.gtin && q.ruleType == 'TAX')?.value ?? 0))) / 100))).toFixed(2));
+    }
+    if (productSelected?.SupercomproSinIVA) {
+      setSupercomproSinIVA(productSelected?.SupercomproSinIVA.toString())
+    }
+    else {
+      setSupercomproSinIVA((((gross) * (supercomproCostSale + 100)) / 100).toFixed(2));
+    }
+    if (productSelected?.SarettoSinIVA) {
+      setSarettoSinIVA(productSelected?.SarettoSinIVA.toString())
+    }
+    else {
+      setSarettoSinIVA((((gross) * (sarettoCostSale + 100)) / 100).toFixed(2));
+    }
+    if (productSelected?.SarettoConIVA) {
+      setSarettoConIVA(productSelected?.SarettoConIVA.toString())
+    }
+    else {
+      setSarettoConIVA(((((gross) * (sarettoCostSale + 100)) / 100) * (((100 + (Number(itmDiscounts?.find(q => q.gtin == productSelected?.gtin && q.ruleType == 'TAX')?.value ?? 0))) / 100))).toFixed(2));
+    }
+
+//alert('Paso 3')
+    if (productSelected?.PeriConIVA) {
+      setPeriConIVA(productSelected?.PeriConIVA.toString())
+      //alert('paso 3.1')
+    }
+    else {
+      
+      setPeriConIVA(((((gross) * (periCostSale + 100)) / 100) * (((100 + (Number(itmDiscounts?.find(q => q.gtin == productSelected?.gtin && q.ruleType == 'TAX')?.value ?? 0))) / 100))).toFixed(2));
+    }
+    if (productSelected?.PeriSinIVA) {
+      setPeriSinIVA(productSelected?.PeriSinIVA.toString())
+    }
+    else {
+      setPeriSinIVA(((gross * (periCostSale + 100)) / 100).toFixed(2));
+    }
+
+
+    if (productSelected?.superviquezConIVA) {
+      setSuperviquezConIVA(productSelected?.superviquezConIVA.toString())
+    }
+    else {
+      setSuperviquezConIVA(((((gross) * (superviquezCostSale + 100)) / 100) * (((100 + (Number(itmDiscounts?.find(q => q.gtin == productSelected?.gtin && q.ruleType == 'TAX')?.value ?? 0))) / 100))).toFixed(2));
+    }
+    if (productSelected?.superviquezSinIVA) {
+      setSuperviquezSinIVA(productSelected?.superviquezSinIVA.toString())
+    }
+    else {
+      setSuperviquezSinIVA(((gross * (superviquezCostSale + 100)) / 100).toFixed(2));
+    }
+
+
+    console.log('EL PRODUCTO CARGADO',productSelected)
+
+    setPrice(productSelected?.PriceFixed ?? 0);
+    setPeriPrice(productSelected?.periPrice ?? 0);
+    setSuperPrice(productSelected?.superPrice ?? 0);
+    setSarettoPrice(productSelected?.sarettoPrice ?? 0);
+    setSuperviquezPrice(productSelected?.superviquezPrice ?? 0)
+    setItemFileCod(productSelected?.gtinItemFile ?? "")
+    setComercialLongDescription(productSelected?.ComercialLongDescription ?? "");
+    setComercialShortDescription(productSelected?.ComercialShortDescription ?? "");
+    setComercialPubliDescription(productSelected?.ComercialPubliDescription ?? "");
+    setComercialHablaDescription(productSelected?.ComercialHablaDescription ?? "");
+    setComercialFonetDescription(productSelected?.ComercialFonetDescription ?? "");
+    setPeriCostSale(productSelected?.PeriCostSale ?? 0);
+    setSupercomproCostSale(productSelected?.SupercomproCostSale ?? 0);
+    setSarettoCostSale(productSelected?.SarettoCostSale ?? 0);
+    setSuperviquezCostSale(productSelected?.superviquezCostSale  ?? 0);
+    setPeriCostUtility(productSelected?.PeriCostUtility ?? 0);
+    setSupercomproCostUtility(productSelected?.SupercomproCostUtility ?? 0);
+    setSarettoCostUtility(productSelected?.SarettoCostUtility ?? 0);
+    setSuperviquezCostUtility(productSelected?.superviquezCostUtility ?? 0);
+    setperimercadosSelected(productSelected?.PerimercadosPOS?.split(',') ?? [])
+    setsarettoSelected(productSelected?.SarettoPOS?.split(',') ?? [])
+    setsupercomproSelected(productSelected?.SupercomproPOS?.split(',') ?? [])
+    setsuperviquezSelected(productSelected?.SuperViquezPOS?.split(',') ?? [])
+    setAmountCosto(productSelected?.amount?.toString() ?? '0');
+
+    setTipoRegistroIdSelected(Number(productSelected?.TipoRegistro_ID))
+    setBuyerTypeSelected(Number(productSelected?.TipoCompraId));
+
+    setIdSegmentacionSelected(Number(productSelected?.SegmentacionArticulo));
+    setIdAreaManejoSelected(Number(productSelected?.AreaManejo))
+
+    console.log('AREA MANEJOSSSS',productSelected?.AreaManejo)
+    console.log('AREA MANEJOSSSS',productSelected?.ComercialLongDescription)
+    console.log('AREA MANEJOSSSS',comercialLongDescription)
+
+    setProyMenVtasUni(productSelected?.ProyMenVtasUni ?? 0);
+    setProyMenVtasCol(productSelected?.ProyMenVtasCol ?? 0);
+    setSkuSustitucionSelected(productSelected?.skuSustitucion ?? '');
+
+    setUbicacionCedi(productSelected?.UbicacionCedi ?? '');
+
+   
+
+
+    if (discounts) {
+      setConfidencial(discounts.find(q => q.ruleCode == 'CONFIDENCIAL')?.value ?? '');
+      setIntroduccion(discounts.find(q => q.ruleCode == 'INTRODUCCION')?.value ?? '');
+      setFijo(discounts.find(q => q.ruleCode == 'FIJO')?.value ?? '');
+      setPromocional(discounts.find(q => q.ruleCode == '?')?.value ?? '');
+      setDDC(discounts.find(q => q.ruleCode == 'DDC')?.value ?? '');  
+      setNoDevolucion(discounts.find(q => q.ruleCode == 'NO DEVOLUCION')?.value ?? '');  
+      setTAX(discounts.find(q => q.ruleCode == 'IMPUESTO')?.value ?? '');
+    }
+  };
+  const handleComercialShortDescriptionChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setComercialShortDescription(event.target.value);
+  }
+
+  const handleComercialPubliDescriptionChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setComercialPubliDescription(event.target.value);
+  }
+
+  const handleComercialFonetDescriptionChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setComercialFonetDescription(event.target.value);
+  }
+
+  const handleComercialHablaDescriptionChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setComercialHablaDescription(event.target.value);
+  }
+
+  const handleConfidencialDiscountChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setConfidencial(event.target.value);
+    console.log('desc fijo', confidencial)
+  }
+
+  const handleAmountCosto = (event: ChangeEvent<HTMLInputElement>) => {
+    setAmountCosto(event.target.value);
+  }
+
+  const handleUbicacionCEDIChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setUbicacionCedi(event.target.value);
+  }
+
+  const handleDCsfecha = (newValue: Date | null): void => {
+    
+    console.log('NEWVALUE-------------->',newValue)
+    console.log('Convertido:',newValue!.toDateString())
+    //setFecha(startDate!.toLocaleString().replace(',',''))
+    
+    setDcsdate(newValue)
+  };
+
+  const handleDCefecha = (newValue: Date | null): void => {
+     setDcedate(newValue)
+  };
+
+  const handleDFIsfecha = (newValue: Date | null): void => {
+     setDfisdate(newValue)
+  };
+  const handleDFIefecha = (newValue: Date | null): void => {
+    setDfiedate(newValue)
+ };
+
+ const handleDDCsfecha = (newValue: Date | null): void => {
+  setDdcsdate(newValue)
+};
+const handleDDCefecha = (newValue: Date | null): void => {
+ setDdcedate(newValue)
+};
+
+
+const handleDEIsfecha = (newValue: Date | null): void => {
+  setDeisdate(newValue)
+
+ const fecha4 = addMonths(deisdate ?? 0, 4)
+  setDeiedate(fecha4)
+};
+const handleDEIefecha = (newValue: Date | null): void => {
+ setDeiedate(newValue)
+};
+
+const handleDNDsfecha = (newValue: Date | null): void => {
+  setDndsdate(newValue)
+};
+const handleDNDefecha = (newValue: Date | null): void => {
+ setDndedate(newValue)
+};
+
+const handleTAXsfecha = (newValue: Date | null): void => {
+  setTaxsdate(newValue)
+};
+const handleTAXefecha = (newValue: Date | null): void => {
+ setTaxedate(newValue)
+};
+
+  const handleNoDevolucionDiscountChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setNoDevolucion(event.target.value);
+  }
+  const handleIntroduccionDiscountChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setIntroduccion(event.target.value);
+    console.log('desc fijo', confidencial)
+  }
+  const handleFijoDiscountChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setFijo(event.target.value);
+  
+  }
+  const handlePromocionalDiscountChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setPromocional(event.target.value);
+  }
+
+  const handleDDCDiscountChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setDDC(event.target.value);
+  }
+
+  const handleTAXChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setTAX(event.target.value);
+  }
+
+  const handlePeriCostUtilityChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setPeriCostUtility(Math.round(Number(event.target.value)));
+  }
+  
+
+  const handleitemFileCod = (event: ChangeEvent<HTMLInputElement>) => {
+    setItemFileCod(event.target.value);
+    console.log('ITEM CODIGO',itemFileCod)
+  }
+  const handleSupercomproCostUtilityChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSupercomproCostUtility(Number(Number(event.target.value).toFixed(2)));
+  }
+  const handleComercialLongDescriptionChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setComercialLongDescription(event.target.value);
+
+    console.log('digitando long description:',event.target.value)
+  }
+  const handleSarettoCostSaleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const val = (Number(Number(event.target.value).toFixed(2)));
+    setSarettoCostSale(val);
+    const resultSinIVA = (grossCostAmount * ((val + 100) / 100));
+    const tax = (Number(itmDiscounts?.find(q => q.gtin == openProduct && q.ruleType == 'TAX')?.value ?? 0) / 100) + 1;
+    setSarettoConIVA((resultSinIVA * tax).toFixed(2));
+    setSarettoSinIVA(resultSinIVA.toFixed(2));
+  }
+  
+
+  const handleSuperViquezPriceChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const price = Number(event.target.value);
+    setSuperviquezPrice(price);
+    const tax = Number(itmDiscounts?.find(q => q.gtin == openProduct && q.ruleType == 'TAX')?.value ?? 0);
+    const precioSinIVA = (price / (1 + (tax / 100)));
+    setSuperviquezSinIVA(precioSinIVA.toFixed(2));
+    setSuperviquezConIVA(price.toFixed(2));
+    setSuperviquezCostUtility(Number(((((precioSinIVA - grossCostAmount) / grossCostAmount) * 100)).toFixed(2)))
+    setSuperviquezCostSale(Number((((precioSinIVA - grossCostAmount) / precioSinIVA) * 100).toFixed(2)))
+  }
+
+  const handleSarettoPriceChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const price = Number(event.target.value);
+    setSarettoPrice(price);
+    const tax = Number(itmDiscounts?.find(q => q.gtin == openProduct && q.ruleType == 'TAX')?.value ?? 0);
+    const precioSinIVA = (price / (1 + (tax / 100)));
+    setSarettoSinIVA(precioSinIVA.toFixed(2));
+    setSarettoConIVA(price.toFixed(2));
+    setSarettoCostUtility(Number(((((precioSinIVA - grossCostAmount) / grossCostAmount) * 100)).toFixed(2)))
+    setSarettoCostSale(Number((((precioSinIVA - grossCostAmount) / precioSinIVA) * 100).toFixed(2)))
+  }
+  const handleSuperPriceChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const price = Number(event.target.value);
+    setSuperPrice(price);
+    const tax = Number(itmDiscounts?.find(q => q.gtin == openProduct && q.ruleType == 'TAX')?.value ?? 0);
+    const precioSinIVA = (price / (1 + (tax / 100)));
+    setSupercomproSinIVA(precioSinIVA.toFixed(2));
+    setSupercomproConIVA(price.toFixed(2));
+    setSupercomproCostUtility(Number(((((precioSinIVA - grossCostAmount) / grossCostAmount) * 100).toFixed(2))))
+    setSupercomproCostSale(Number((((precioSinIVA - grossCostAmount) / precioSinIVA) * 100).toFixed(2)))
+  }
+  const handlePeriPriceChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const price = Number(event.target.value);
+    setPeriPrice(price);
+    const tax = Number(itmDiscounts?.find(q => q.gtin == openProduct && q.ruleType == 'TAX')?.value ?? 0);
+    const precioSinIVA = (price / (1 + (tax / 100)));
+    setPeriSinIVA(precioSinIVA.toFixed(2));
+    setPeriConIVA(price.toFixed(2));
+    setPeriCostUtility(Number(((((precioSinIVA - grossCostAmount) / grossCostAmount) * 100).toFixed(2))))
+    setPeriCostSale(Number((((precioSinIVA - grossCostAmount) / precioSinIVA) * 100).toFixed(2)))
+  }
+  const handleChangePOSSuperCompro = (event: SelectChangeEvent<typeof supercomproSelected>) => {
+    const {
+      target: { value },
+    } = event;
+    setsupercomproSelected(
+      // On autofill we get a stringified value.
+      typeof value === 'string' ? value.split(',') : value,
+    );
+  };
+  const handleChangePOSPerimercados = (event: SelectChangeEvent<typeof perimercadosSelected>) => {
+    const {
+      target: { value },
+    } = event;
+    setperimercadosSelected(
+      // On autofill we get a stringified value.
+      typeof value === 'string' ? value.split(',') : value,
+    );
+  };
+
+  const handleChangePOSSuperviquez = (event: SelectChangeEvent<typeof superviquezSelected>) => {
+    const {
+      target: { value },
+    } = event;
+    setsuperviquezSelected(
+      // On autofill we get a stringified value.
+      typeof value === 'string' ? value.split(',') : value,
+    );
+  };
+
+
+  const handleChangePOSSaretto = (event: SelectChangeEvent<typeof sarettoSelected>) => {
+    const {
+      target: { value },
+    } = event;
+    setsarettoSelected(
+      // On autofill we get a stringified value.
+      typeof value === 'string' ? value.split(',') : value,
+    );
+  };
+  const ITEM_HEIGHT = 48;
+  const ITEM_PADDING_TOP = 8;
+  const MenuProps = {
+    PaperProps: {
+      style: {
+        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+        width: 100,
+      },
+    },
+  };
+
+  const supercompro = pos.filter(q => q.puntoVenta_dsc.includes('SUPER COMPRO')).map(q => `${q.puntoVenta_dsc}`)
+  const perimercados = pos.filter(q => q.puntoVenta_dsc.includes('PERI')).map(q => `${q.puntoVenta_dsc}`)
+  const superviquez = pos.filter(q => q.puntoVenta_dsc.includes('SUPER VIQUEZ')).map(q => `${q.puntoVenta_dsc}`)
+  const saretto = pos.filter(q => q.puntoVenta_dsc.includes('SARETTO')).map(q => `${q.puntoVenta_dsc}`)
+  const [perimercadosSelected, setperimercadosSelected] = useState<string[]>([]);
+  const [superviquezSelected, setsuperviquezSelected] = useState<string[]>([]);
+  const [perichecked, setPeriChecked] = useState(false);
+  const [superviquezchecked, setSuperviquezChecked] = useState(false);
+  const [supercomproConIVA, setSupercomproConIVA] = useState<string>("0");
+  const [supercomproSinIVA, setSupercomproSinIVA] = useState<string>("0");
+  const [sarettoConIVA, setSarettoConIVA] = useState<string>("0");
+  const [sarettoSinIVA, setSarettoSinIVA] = useState<string>("0");
+  const [superviquezConIVA, setSuperviquezConIVA] = useState<string>("0");
+  const [superviquezSinIVA, setSuperviquezSinIVA] = useState<string>("0");
+  const [periConIVA, setPeriConIVA] = useState<string>("0");
+  const [periSinIVA, setPeriSinIVA] = useState<string>("0");
+  const [supercomprochecked, setSupercomproChecked] = useState(false);
+  const [sarettochecked, setSarettoChecked] = useState(false);
+  const [supercomproSelected, setsupercomproSelected] = useState<string[]>([]);
+  const [sarettoSelected, setsarettoSelected] = useState<string[]>([]);
+
+  function b64DecodeUnicode(str: any) {
+    //console.log('str en b64 decode:',str)
+    if (str) {
+    return Buffer.from(str, "base64").toString("utf8")}
+    else return ''};
+
+    const BlogPostCardMediaWrapper = styled('div')({
+      paddingTop: 'calc(100% * 4 / 4)',
+      position: 'relative'
+    });
+
+    
+
+
+  const handleChange = async (event: SelectChangeEvent) => {
+    const {
+      target: { value },
+    } = event;
+    const data = await productApi.getSubCategories(Number(value));
+    setCategoryIdSelected(Number(value));
+    setSubCategories(data)
+  };
+
+
+  const handleChangeSegmentacion = async (event: SelectChangeEvent) => {
+    const {
+      target: { value },
+    } = event;
+   
+    setIdSegmentacionSelected(Number(value));
+    
+  };
+
+  const handleChangeAreaManejo = async (event: SelectChangeEvent) => {
+    const {
+      target: { value },
+    } = event;
+   
+    setIdAreaManejoSelected(Number(value));
+    
+  };
+
+
+  const handleProyMenVtasUniChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const {
+      target: { value },
+    } = event;
+   
+    setProyMenVtasUni(Number(value));
+    
+  };
+
+
+  const handleProyMenVtasColChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const {
+      target: { value },
+    } = event;
+   
+    setProyMenVtasCol(Number(value));
+    
+  };
+
+
+
+
+
+
+  const handleSupercomproCostSaleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const val = Math.round(Number(event.target.value));
+    setSupercomproCostSale(val);
+    const resultSinIVA = (grossCostAmount * ((val + 100) / 100));
+    const tax = (Number(itmDiscounts?.find(q => q.gtin == openProduct && q.ruleType == 'TAX')?.value ?? 0) / 100) + 1;
+    setSupercomproConIVA((resultSinIVA * tax).toFixed(2));
+    setSupercomproSinIVA(resultSinIVA.toFixed(2));
+  }
+
+  const handleSuperviqueaCostSaleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    //alert('por aqui...')
+    const val = Number(event.target.value);
+    setSuperviquezCostSale(val);
+    const resultSinIVA = (grossCostAmount * ((val + 100) / 100));
+    const tax = (Number(itmDiscounts?.find(q => q.gtin == openProduct && q.ruleType == 'TAX')?.value ?? 0) / 100) + 1;
+    setSuperviquezConIVA((resultSinIVA * tax).toFixed(2));
+    setSuperviquezSinIVA(resultSinIVA.toFixed(2));
+  }
+
+  const handlePeriCostSaleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    //alert('alerta 1')
+    const val = Number(event.target.value);
+    setPeriCostSale(val);
+    const resultSinIVA = (grossCostAmount * ((val + 100) / 100));
+    const tax = (Number(itmDiscounts?.find(q => q.gtin == openProduct && q.ruleType == 'TAX')?.value ?? 0) / 100) + 1;
+    setPeriConIVA((resultSinIVA * tax).toFixed(2));
+    setPeriSinIVA(resultSinIVA.toFixed(2));
+  }
+
+  
+
+  const handleBuyerTypeChange = (event: SelectChangeEvent) => {
+    const {
+      target: { value },
+    } = event;
+    setBuyerTypeSelected(Number(value));
+  };
+
+  const handleSkuSustitucionTypeChange = (event: SelectChangeEvent) => {
+    const {
+      target: { value },
+    } = event;
+    setSkuSustitucionSelected(value);
+  };
+
+  const handleSarettoCostUtilityChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSarettoCostUtility(Number(event.target.value));
+  }
+
+  const handlesuperviquezCostUtilityChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSuperviquezCostUtility(Number(event.target.value));
+  }
+
+  const handleSubcategoryChange = (event: SelectChangeEvent) => {
+    const {
+      target: { value },
+    } = event;
+    setSubCategoryIdSelected(Number(value));
+
+  };
+
+  const handleTipoRegistroChange = (event: SelectChangeEvent) => {
+    const {
+      target: { value },
+    } = event;
+    setTipoRegistroIdSelected(Number(value));
+
+  };
+
+
+  const handleReject = async () => {
+    
+    if (confirm('Desea rechazar este producto?' + openProduct) == true) 
+    {
+    await productApi.addStatusProduct(openProduct ?? "", ProductStatus.REJECT);
+    toast.success('Producto rechazado');
+    router.reload();}
+    
+  }
+
+
+  const handleAccept = async () => {
+    if (confirm( user.UserType == "2" ? 'Desea enviar producto a ADC?' :'Desea actualizar y aprobar este producto?') == true) 
+    {
+      if (user.UserType != "2") { handleUpdateComercialDataProduct();}
+    await productApi.addStatusProduct(openProduct ?? "", ProductStatus.ACCEPT);
+    toast.success('Producto actualizado y aceptado!');
+    router.reload();
+    }
+  }
+ 
+ 
+  const handleUpdateComercialDataProduct = async () => {
+   await productApi.updateProductComercialData(openProduct ?? "", comercialLongDescription,
+      comercialShortDescription,comercialPubliDescription,comercialFonetDescription,comercialHablaDescription, 
+      periCostSale, periCostUtility, sarettoCostSale, sarettoCostUtility,
+      supercomproCostUtility, posID ?? -1, supercomproCostSale, perimercadosSelected.join(','),
+      sarettoSelected.join(','), supercomproSelected.join(','), price, superPrice, sarettoPrice, periPrice,
+      Number(periSinIVA), Number(periConIVA), Number(supercomproSinIVA), Number(supercomproConIVA),
+      Number(sarettoSinIVA), Number(sarettoConIVA), Number(confidencial), Number(introduccion), Number(fijo), 
+      Number(promocional),Number(ddc),Number(nodevolucion) ,
+      superviquezCostSale, superviquezCostUtility,superviquezPrice,Number(superviquezSinIVA), 
+      Number(superviquezConIVA), superviquezSelected.join(','),Number(IdSegmentacionSelected),
+      Number(tipoRegistroIdSelected),Number(buyerTypeSelected),Number(IdAreaManejoSelected),UbicacionCedi, ProyMenVtasUni, ProyMenVtasCol
+      
+      );
+
+      console.log('USUARIO',user.UserType)
+
+      console.log(':::::::::::::::::::',IdSegmentacionSelected)
+    
+      if (user.UserType == "2" ) {
+      
+              if (comercialLongDescription && comercialLongDescription.length > 1 
+                               && comercialShortDescription && comercialShortDescription.length > 1 
+                               && comercialPubliDescription && comercialPubliDescription.length > 1
+                               && comercialFonetDescription && comercialFonetDescription.length > 1
+                               && comercialHablaDescription && comercialHablaDescription.length > 1
+                               && IdSegmentacionSelected   && tipoRegistroIdSelected && buyerTypeSelected && IdAreaManejoSelected)
+                               
+                                {
+                                   handleAccept();
+                                }    else  {
+
+                                 console.log(IdSegmentacionSelected,tipoRegistroIdSelected,buyerTypeSelected,IdAreaManejoSelected)
+
+                                 alert('Debe completar todos los campos del formulario!')
+                                 return 
+
+                                 }
+
+
+    }
+    setComercialLongDescription('');
+    setComercialShortDescription('');
+    setComercialPubliDescription('');
+    setComercialFonetDescription('');
+    setComercialHablaDescription('');
+
+    setSuperviquezCostSale(0);
+    setSuperviquezCostUtility(0);
+    setSuperviquezPrice(0);
+    setPeriCostSale(0);
+    setPeriCostUtility(0);
+    setSupercomproCostSale(0);
+    setSupercomproCostUtility(0);
+    setSarettoCostSale(0);
+    setPeriPrice(0);
+    setSuperPrice(0);
+    setSarettoPrice(0);
+    setSarettoCostUtility(0);
+    setPosID(null);
+    setProyMenVtasCol(0);
+    setProyMenVtasUni(0);
+
+    toast.success('Producto actualizado!');
+    router.reload();
+  }
+
+  //
+  const handleUpdateITM = async (): Promise<void> => {
+    console.log('ITEM FILE DE NUEVO',itemFileCod)
+    if ((confirm('Desea actualizar Item Code?') == true) )
+      {
+    await productApi.updateCode(openProduct ?? "", itemFileCod ?? "").then(() => {
+      setItemFileCod("");
+      toast.success('Producto actualizado');
+      router.reload();
+    })
+  }
+  };
+  const handleUpdateProduct = async (): Promise<void> => {
+    // SE AGREGO CAPTURA DEL COSTO DEL PRODUCTO QUE SE APLICA EN EL CAMPO amount      NEWW
+
+    console.log(openProduct,confidencial,introduccion,fijo,nodevolucion,ddc,tax)
+    console.log('convertida la fecha',dcsdate!.toLocaleDateString())
+    console.log(categoryIdSelected,subCategoryIdSelected,tipoRegistroIdSelected,buyerTypeSelected,amountCosto)
+
+
+
+if(cambioPrecios)
+    {
+      if ((confirm('Desea actualizar precio del producto y enviarlo a Gessa?') == true) )
+      {
+      await productApi.updateProductCambioPrecios(openProduct ?? "",amountCosto).then(() => {
+            setAmountCosto('0')
+      })
+      toast.success('Producto actualizado para cambio precio');
+      router.reload();
+    }
+    
+    }
+
+  
+else 
+{
+
+      
+      
+      
+  console.log('SKU....',  checkedSKU  )
+  console.log('SKU', (checkedSKU && skuSustitucionSelected != ''))  
+
+    if ((categoryIdSelected && subCategoryIdSelected  && (Number(amountCosto) > 0) && (!checkedSKU || (checkedSKU && skuSustitucionSelected != '') )  ))
+    {
+    if ((confirm('Desea actualizar producto y enviarlo a Gessa?') == true) )
+    {
+    
+       
+      //await productApi.updateProduct(openProduct ?? "", Number(categoryIdSelected), Number(subCategoryIdSelected), Number(tipoRegistroIdSelected),Number(buyerTypeSelected),foto1,foto2,foto3,foto4,foto5, Number(amountCosto), checked).then(() => {
+               
+    
+                await productApi.updateProduct(openProduct ?? "", Number(categoryIdSelected), Number(subCategoryIdSelected), Number(tipoRegistroIdSelected),
+                                               Number(buyerTypeSelected),foto1,foto2,foto3,foto4,foto5, Number(amountCosto), 
+                                               checked,aceptaDevolucion, checkedSKU ?   skuSustitucionSelected : '').then(() => {
+                  setOpenProduct(null);
+                  setBuyerTypeSelected(null);
+                  setCategoryIdSelected(null);
+                  setSubCategoryIdSelected(null);
+                  setTipoRegistroIdSelected(null);
+                  setSkuSustitucionSelected('');
+                  setPrice(0);
+                  setPeriPrice(0);
+                  setSuperPrice(0);
+                  setSarettoPrice(0);
+                  setSuperviquezPrice(0);
+                  setAmountCosto('0');
+                
+                })
+
+              
+
+                await productApi.updateDiscounts( openProduct ?? "",'PCD','DC',confidencial,'A',dcsdate!.toISOString(),dcedate!.toISOString(),'4')  
+                await productApi.updateDiscounts( openProduct ?? "",'PCD','DEI',introduccion,'A',deisdate!.toISOString(),deiedate!.toISOString(),'2')  
+                await productApi.updateDiscounts( openProduct ?? "",'PCD','DFI',fijo,'A',dfisdate!.toISOString(),dfiedate!.toISOString(),'1')  
+                await productApi.updateDiscounts( openProduct ?? "",'PCD','DND',nodevolucion,'A',dndsdate!.toISOString(),dndedate!.toISOString(),'6')  
+                await productApi.updateDiscounts( openProduct ?? "",'PCD','DDC',ddc,'A',ddcsdate!.toISOString(),ddcedate!.toISOString(),'5')  
+                //await productApi.updateDiscounts( openProduct ?? "",'PCD','PAI',confidencial,'','','3','A')  
+                //await productApi.updateDiscounts( openProduct ?? "",'PCD','TD',confidencial,'','','4','A')  
+                await productApi.updateDiscounts( openProduct ?? "",'TAX','01',tax,'C',taxsdate!.toISOString(),taxedate!.toISOString(),'1')  
+
+
+                toast.success('Producto actualizado');
+                router.reload();
+
+  } 
+  } else {alert('Debe completar todos los campos!')}
+
+
+}
+
+  };
+
+
+
+
+
+
+  const handleCancelEdit = (): void => {
+    setOpenProduct(null);
+    setPrice(0);
+    setBuyerTypeSelected(null);
+    setCategoryIdSelected(null);
+    setSubCategoryIdSelected(null);
+    setComercialLongDescription('');
+    setComercialShortDescription('');
+    setComercialPubliDescription('');
+    setPeriCostSale(0);
+    setPeriCostUtility(0);
+    setSupercomproCostSale(0);
+    setSupercomproCostUtility(0);
+    setSarettoCostSale(0);
+    setSarettoCostUtility(0);
+    setPeriPrice(0);
+    setSuperPrice(0);
+    setSarettoPrice(0);
+    setPosID(null);
+    setItmDiscounts(undefined);
+  };
+  const handlesupercomprochecked = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setsupercomproSelected(event.target.checked ? supercompro : [])
+    setSupercomproChecked(event.target.checked);
+  };
+  const handlesarettochecked = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setsarettoSelected(event.target.checked ? saretto : [])
+    setSarettoChecked(event.target.checked);
+  };
+  const handleperichecked = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setperimercadosSelected(event.target.checked ? perimercados : [])
+    setPeriChecked(event.target.checked);
+  };
+
+  const handlesuperviquezchecked = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setsuperviquezSelected(event.target.checked ? superviquez : [])
+    setSuperviquezChecked(event.target.checked);
+  };
+  const handleCheckedChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
+  };
+
+  const handleCheckedSKUChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCheckedSKU(event.target.checked);
+  };
+
+  const handleCheckedAceptaDevolucion = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setAceptaDevolucion(event.target.checked);
+  };
+
+  const grossCost = (product: Item | undefined, Discounts: ItemsDiscount[]): number => {
+
+    if (!product) {
+      return 0;
+    }
+    let productResult = product.amount ?? 0;
+           
+    //productResult = productResult - (productResult * Number(confidencial ?? 1)) / 100;
+    //productResult = productResult - (productResult * Number(Discounts?.find(q => q.gtin == product.gtin && q.ruleCode == 'DDC')?.value ?? 0)) / 100;
+    //productResult = productResult - (productResult * Number(introduccion ?? 1)) / 100;
+   
+    productResult = productResult - (productResult * Number(fijo ?? 1)) / 100;
+    // console.log('FIJO: ',productResult)
+
+   // productResult = productResult - (productResult * Number(Discounts?.find(q => q.gtin == product.gtin && q.ruleCode == 'NO DEVOLUCION')?.value ?? 1)) / 100;
+   //productResult = productResult - (productResult * Number(Discounts?.find(q => q.gtin == product.gtin && q.ruleCode == '?')?.value ?? 0)) / 100;
+  
+  /*  setfoto1(product.FotoProductoFrente ? b64DecodeUnicode(product.FotoProductoFrente): '/static/mock-images/covers/caja.png')
+   setfoto2(product.FotoProductoLado ? b64DecodeUnicode(product.FotoProductoLado): '/static/mock-images/covers/caja.png')
+   setfoto3(product.FotoProducto5 ? b64DecodeUnicode(product.FotoProducto5): '/static/mock-images/covers/caja.png')
+   setfoto4(product.FotoProducto4 ? b64DecodeUnicode(product.FotoProducto4): '/static/mock-images/covers/caja.png')
+   setfoto5(product.FotoProducto5 ? b64DecodeUnicode(product.FotoProducto5): '/static/mock-images/covers/caja.png') */
+
+  //  console.log('Fotos',posts)
+
+  //  setCategoryIdSelected(Number(product?.CategoryId))
+  //  setSubCategoryIdSelected(Number(product?.SubCategoryId))
+  //  setTipoRegistroIdSelected(Number(product?.TipoRegistro_ID))
+  //  setBuyerTypeSelected(Number(product?.TipoCompraId));
+  //  if(product.CompraEnUnidad) {
+  //               setChecked(true)} 
+  //               else 
+  //               {setChecked(false)}
+   
+  //  console.log('LA CATEGORIA',categoryIdSelected)
+
+
+    return productResult;
+  }
+  return (
+    <div {...other}>
+      <Scrollbar>
+        <Table sx={{ minWidth: 1200 }}>
+          <TableHead>
+            <TableRow>
+              <TableCell />
+              <TableCell>
+                SKU
+              </TableCell>
+              <TableCell>
+                Marca
+              </TableCell>
+              <TableCell>
+                Descripcion
+              </TableCell>
+              <TableCell>
+                Proveedor
+              </TableCell>
+              <TableCell>
+                Estado
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {products.map((product) => {
+
+             
+
+
+           // console.log('Foto mala........',product.FotoProductoArribaBAse)
+           // console.log('Foto buena........',product.FotoProductoFrente)
+
+              const open = product.gtin === openProduct;
+              return (
+                <Fragment key={product.gtin}>
+                  <TableRow
+                    hover
+                    key={product.gtin}
+                  >
+                    <TableCell
+                      padding="checkbox"
+                      sx={{
+                        ...(open && {
+                          position: 'relative',
+                          '&:after': {
+                            position: 'absolute',
+                            content: '" "',
+                            top: 0,
+                            left: 0,
+                            backgroundColor: 'primary.main',
+                            width: 3,
+                            height: 'calc(100% + 1px)'
+                          }
+                        })
+                      }}
+                      width="25%"
+                    >
+                      <IconButton onClick={() => handleOpenProduct(product.gtin)}>
+                        {
+                          open
+                            ? <ChevronDownIcon fontSize="small" />
+                            : <ChevronRightIcon fontSize="small" />
+                        }
+                      </IconButton>
+                    </TableCell>
+                    <TableCell>
+                      {product.gtin}
+                    </TableCell>
+                    <TableCell>
+                      {product.brandName}
+                    </TableCell>
+                    <TableCell>
+                      {product.descriptionShort}   <SeverityPill color='error'> {product.CambioPrecio? 'CAMBIO DE PRECIO!':''}   </SeverityPill>
+                    </TableCell>
+                    <TableCell>
+                      {product.partyName}
+                    </TableCell>
+                    <TableCell>
+                      
+                      <SeverityPill color={product.Status == -1 ? 'error' : product.Status == 1 ? 'success' : 'secondary'}>
+                        {product.Status == -1 ? 'Rechazado' : product.Status == 1 ? user.UserType == "1" ? 'Enviado x Asistente' : user.UserType == "4" ? 'Rev. ADC' : 'Aceptado' : 'Pendiente'}
+                      </SeverityPill> 
+                    </TableCell>
+                  </TableRow>
+                  {open && (
+                    <TableRow>
+                      <TableCell
+                        colSpan={7}
+                        sx={{
+                          p: 0,
+                          position: 'relative',
+                          '&:after': {
+                            position: 'absolute',
+                            content: '" "',
+                            top: 0,
+                            left: 0,
+                            backgroundColor: 'primary.main',
+                            width: 3,
+                            height: 'calc(100% + 1px)'
+                          }
+                        }}
+                      >
+                        {(user.UserType == "3") && (!product.CategoryId || product.gtinItemFile!.length > 0) && <Fragment>
+                          <CardContent>
+                            {/* podemos quitar esta parte para ver los combos y/o bloquear el mantenimiento respectivo */}
+                            {(!cambioPrecios  &&       
+                            <Grid
+                              container
+                              spacing={2}
+                            >
+                              <Grid
+                                item
+                                md={11}
+                                xs={12}
+                              >
+                                   <SeverityPill color='info'>
+                                <Typography variant="h6">
+                                  Datos a actualizar
+                                </Typography> </SeverityPill>
+                                <Divider sx={{ my: 2 }} />
+                                <Grid
+                                  container
+                                  spacing={3}>
+
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">Categoria</InputLabel>
+                                      <Select
+                                        id="demo-simple-select-label"
+                                        value={categoryIdSelected?.toString()}
+                                        onChange={handleChange}
+                                        input={<OutlinedInput label="Categoria" />}
+                                        MenuProps={MenuProps}
+                                      >
+                                        {categories && categories.sort((a,b)=> a.categoria_dsc.localeCompare(b.categoria_dsc)).map((name) => (
+                                          <MenuItem key={name.categoria_id} value={name.categoria_id}>
+                                            {name.categoria_dsc}
+                                          </MenuItem>
+                                        ))}
+                                      </Select>
+                                    </FormControl>
+                                  </Grid>
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">Subcategoria</InputLabel>
+                                      <Select
+                                        id="demo-simple-select-label"
+                                        value={subCategoryIdSelected?.toString()}
+                                        onChange={handleSubcategoryChange}
+                                        input={<OutlinedInput label="Subcategoria" />}
+                                        MenuProps={MenuProps}
+                                      >
+                                        {subCategories && subCategories.map((name) => (
+                                          <MenuItem key={name.subcategoria_id} value={name.subcategoria_id}>
+                                            {name.subcategoria_dsc}
+                                          </MenuItem>
+                                        ))}
+                                      </Select>
+                                    </FormControl>
+                                  </Grid>
+                             
+
+                             
+
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <Box
+                                      sx={{
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        mb: 3
+                                      }}
+                                    >
+                                      <div>
+                                        <Typography variant="subtitle1">
+                                          Desea indicar Sku de sustitucion
+                                        </Typography>
+                                      </div>
+                                      <Switch checked={checkedSKU}
+                                        onChange={handleCheckedSKUChange} />
+                                    </Box>
+                                  </Grid>
+
+                                   <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">Sku de Sustitucion</InputLabel>
+                                      <Select
+                                        id="demo-simple-select-label"
+                                        value={skuSustitucionSelected}
+                                        disabled={!checkedSKU}
+                                        onChange={handleSkuSustitucionTypeChange}
+                                        input={<OutlinedInput label="Sku de Sustitucion" />}
+                                        MenuProps={MenuProps}
+                                      >
+                                        {SkuSustituciones && SkuSustituciones.map((name) => (
+                                          <MenuItem key={name.gtin} value={name.gtin}>
+                                            {name.functionalName + ' ' + name.gtin}
+                                          </MenuItem>
+                                        ))}
+                                      </Select>
+                                    </FormControl>
+                                  </Grid> 
+                                  </Grid> 
+
+                                
+                                <Grid mt={1}
+                                  container
+                                  spacing={3}
+                                >
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <Box
+                                      sx={{
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        mb: 3
+                                      }}
+                                    >
+                                      <div>
+                                        <Typography variant="subtitle1">
+                                          Compra en unidad
+                                        </Typography>
+                                      </div>
+                                      <Switch checked={checked}
+                                        onChange={handleCheckedChange} />
+                                    </Box>
+                                  </Grid>
+
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <Box
+                                      sx={{
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        mb: 3
+                                      }}
+                                    >
+                                      <div>
+                                        <Typography variant="subtitle1">
+                                          Acepta Devolución
+                                        </Typography>
+                                      </div>
+                                      <Switch checked={aceptaDevolucion}
+                                        onChange={handleCheckedAceptaDevolucion} />
+                                    </Box>
+                                  </Grid>
+
+
+
+
+                                </Grid>
+                              </Grid>
+
+
+                              
+                            </Grid>
+                          )}
+{/* //   METER A PARTIR DE AQUI TODOS LOS DATOS DE COSTOS QUE ESTAN EN EL PROVEEDOR NO EWAY  */}
+
+<Divider sx={{ my: 3 }} />
+
+  <Grid
+    item
+    md={16}
+    xs={12}
+  >
+     <SeverityPill color='info'>
+    <Typography variant="h6">
+      INFORMACION COMERCIAL PROVEEDOR
+    </Typography>
+    </SeverityPill>
+    <Divider sx={{ my: 2 }} />
+    <Grid
+      container
+      spacing={1}
+    >
+      <Grid item md={6} xs={12}>
+        <table>
+          <TableHead>
+            <TableRow>
+          
+              <TableCell>DESCRIPCION</TableCell>
+              
+              <TableCell>MONTO %</TableCell>
+              <TableCell>DESDE</TableCell>
+              <TableCell>HASTA</TableCell>
+            </TableRow>
+
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>
+                COSTO ¢
+              </TableCell>
+              <TableCell>
+                {/* {product.amount?.toFixed(2)} */}
+                <TextField type={'number'} disabled={user.UserType!="3"}
+                      value={amountCosto}
+                      onChange={handleAmountCosto}
+                    />
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+            </TableRow>
+
+            <TableRow>
+              <TableCell>
+                 DESCUENTO FIJO
+              </TableCell>
+              <TableCell>
+                {/* {product.amount?.toFixed(2)} */}
+                <TextField type={'number'} disabled={true}
+                      value={descuentoFijo}
+                      
+                    />
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+            </TableRow>
+          
+            <TableRow>
+              {itmDiscounts && itmDiscounts.find(q => q.ruleCode == 'INTRODUCCION') &&
+                <>
+                  <TableCell>
+                    {itmDiscounts.find(q => q.ruleCode == 'INTRODUCCION')?.ruleCode}
+                  </TableCell>
+                  <TableCell>
+                    <TextField type={'number'} disabled={user.UserType!="3"}
+                      value={introduccion}
+                      onChange={handleIntroduccionDiscountChange}
+                    />
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'INTRODUCCION')?.startDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={deisdate}
+                          onChange={handleDEIsfecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'INTRODUCCION')?.endDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={deiedate}
+                          onChange={handleDEIefecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                </>
+              }
+            </TableRow>
+  
+            <TableRow>
+              {itmDiscounts && itmDiscounts.find(q => q.ruleCode == 'IMPUESTO') &&
+                <>
+                  <TableCell>
+                    {itmDiscounts.find(q => q.ruleCode == 'IMPUESTO')?.ruleCode} %
+                  </TableCell>
+                
+                  <TableCell>
+                    <TextField type={'number'} disabled={user.UserType!="3"}
+                      value={tax}
+                      onChange={handleTAXChange}
+                    />
+
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'IMPUESTO')?.startDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={taxsdate}
+                          onChange={handleTAXsfecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                  <TableCell>
+                    {/* {format(new Date(itmDiscounts.find(q => q.ruleCode == 'IMPUESTO')?.endDate ?? new Date()), 'dd/MM/yyyy')} */}
+                    <Box sx={{ ml: 1 }}>
+                        <DatePicker
+                          label=""
+                          inputFormat="dd/MM/yyyy"
+                          value={taxedate}
+                          onChange={handleTAXefecha}
+                          renderInput={(inputProps) => <TextField {...inputProps} />}
+                        />
+                   </Box>
+                  </TableCell>
+                </>
+              }
+            </TableRow>
+
+          </TableBody>
+        </table>
+      </Grid>
+      </Grid>
+      </Grid>
+      <Divider />
+
+
+
+
+
+
+{/* // hasta aqui nuevo codigo de precios  e inicio de fotos */}
+
+                            
+                          </CardContent>
+
+                          <Divider />     
+   
+                          
+
+                          <Grid
+                            container
+                            spacing={3}
+                          >
+                            {posts.filter(q=>q.cover!='/static/mock-images/covers/caja.png' ).map((post) => (
+                              
+                          
+
+                              <Grid
+                                item
+                                key={post.id} 
+                                md={4}
+                                xs={12}
+                              >
+                                <Card
+                                  sx={{
+                                    height: '100%',
+                                    p: 2
+                                  }}
+                                >
+                                  <BlogPostCardMediaWrapper>
+                                    <CardMedia
+                                      image={post.cover}
+                                      
+                                      sx={{
+                                        height: '80%',
+                                        position: 'absolute',
+                                        top: 0,
+                                        width: '80%'
+                                      }}
+                                    />
+                                  </BlogPostCardMediaWrapper>
+                                  <Box sx={{ mt: 2 }}>
+                                    <div>
+                                      <Chip
+                                        avatar={<Avatar>{post.category}</Avatar>} 
+                                        color="primary"
+                                        label={post.title}
+                                        size="medium"
+                                       
+                                      />
+                                    </div>
+                                    <Box
+                                      sx={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        my: 2
+                                      }}
+                                    >
+                                  
+                                    
+                                    </Box>
+                                  
+                                
+                                  </Box>
+                                  <Box>
+                                
+                                
+                                  </Box>
+                                </Card>
+                              </Grid>
+                            ))}
+                          </Grid>
+                      
+                      
+                                                    {/* fin fotos */}
+                          <Divider />     
+                          <Box
+                            sx={{
+                              display: 'flex',
+                              flexWrap: 'wrap',
+                              px: 2,
+                              py: 1
+                            }}
+                          >
+                            <Button
+                              onClick={handleUpdateProduct}
+                              sx={{ m: 1 }}
+                              type="submit"
+                              variant="contained"
+                            >
+                              {cambioPrecios ? 'Cambiar Precios' : 'Actualizar Inf. Proveedor'}
+                            </Button>
+                            <Button
+                              onClick={handleCancelEdit}
+                              sx={{ m: 1 }}
+                              variant="outlined"
+                            >
+                              Cancelar
+                            </Button>
+                          </Box>
+                          <Divider />
+                        </Fragment>}
+                        {user.UserType == "5" && <Fragment>
+                          <CardContent>
+                            <Grid
+                              container
+                              spacing={2}>
+                              
+                              <Grid
+                                item
+                                md={11}
+                                xs={12}>
+                                <Typography variant="h6">
+                                  Datos código
+                                </Typography>
+                                <Divider sx={{ my: 2 }} />
+                                <Grid
+                                  container
+                                  spacing={3}>
+                                  <Grid
+                                    item
+                                    md={4}
+                                    xs={12}
+                                  >
+                                    <TextField
+                                      fullWidth
+                                      value={itemFileCod}
+                                      onChange={handleitemFileCod}
+                                      label="Código"
+                                    />
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  flexWrap: 'wrap',
+                                  px: 2,
+                                  py: 1
+                                }}
+                              >
+                                <Button
+                                  onClick={handleUpdateITM}
+                                  sx={{ m: 1 }}
+                                  type="submit"
+                                  variant="contained"
+                                >
+                                  Actualizar
+                                </Button>
+                                <Button
+                                  onClick={handleCancelEdit}
+                                  sx={{ m: 1 }}
+                                  variant="outlined"
+                                >
+                                  Cancelar
+                                </Button>
+                              </Box>
+                            </Grid>
+                          </CardContent>
+                        </Fragment>}
+                        {(user.UserType == "2" || user.UserType == "1" || user.UserType == "4" || user.UserType == "5") && <Fragment>
+                          <Divider />
+                          {(user.UserType == "2" || user.UserType == "1" || user.UserType == "4" || user.UserType == "5") && <>  <CardContent>
+
+                            
+                            <Grid
+                              container
+                              spacing={2}
+                            >
+                              <Grid
+                                item
+                                md={11}
+                                xs={12}
+                              >
+                              
+                                <SeverityPill color='info'>
+                                <Typography variant="h6">
+                                  DATOS DE USO COMERCIAL
+                                  </Typography>
+                                  </SeverityPill>
+
+                              
+                               
+                                <Divider sx={{ my: 2 }} />
+
+                                
+                                <Grid
+                                  container
+                                  spacing={3}>
+
+                                  {((product.CambioPrecio != true) && <>
+
+
+
+                      {/*               <Grid
+                                    item
+                                    md={4}
+                                    xs={12}
+                                  >
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">Categoria</InputLabel>
+                                      <Select
+                                        id="demo-simple-select-label"
+                                        value={categoryIdSelected?.toString()}
+                                        onChange={handleChange}
+                                        input={<OutlinedInput label="Categoria" />}
+                                        MenuProps={MenuProps}
+                                      >
+                                        {categories && categories.sort((a,b)=> a.categoria_dsc.localeCompare(b.categoria_dsc)).map((name) => (
+                                          <MenuItem key={name.categoria_id} value={name.categoria_id}>
+                                            {name.categoria_dsc}
+                                          </MenuItem>
+                                        ))}
+                                      </Select>
+                                    </FormControl>
+                                  </Grid>
+
+                                  */}
+                                  <Grid
+                                    item
+                                    md={3}
+                                    xs={12}
+                                  >
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">Subcategoria</InputLabel>
+                                      <Select
+                                        id="demo-simple-select-label"
+                                        value={subCategoryIdSelected?.toString()}
+                                          disabled={user.UserType == "4"}
+                                        onChange={handleSubcategoryChange}
+                                        input={<OutlinedInput label="Subcategoria" />}
+                                        MenuProps={MenuProps}
+                                      >
+                                        {subCategories && subCategories.map((name) => (
+                                          <MenuItem key={name.subcategoria_id} value={name.subcategoria_id}>
+                                            {name.subcategoria_dsc}
+                                          </MenuItem>
+                                        ))}
+                                      </Select>
+                                    </FormControl>
+                                  </Grid>
+ 
+
+                                    <Grid
+                                    item
+                                    md={3}
+                                    xs={12}
+                                  >
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">Tipo de Registro</InputLabel>
+                                      <Select
+                                        id="demo-simple-select-label"
+                                        disabled={user.UserType == "4"}
+                                        value={tipoRegistroIdSelected?.toString()}
+                                        onChange={handleTipoRegistroChange}
+                                        input={<OutlinedInput label="Tipo Registro" />}
+                                        MenuProps={MenuProps}
+                                      >
+                                        {tiposregistro && tiposregistro.map((name) => (
+                                          <MenuItem key={name.TipoRegistro_ID} value={name.TipoRegistro_ID}>
+                                            {name.DescripcionTR}
+                                          </MenuItem>
+                                        ))}
+                                      </Select>
+                                    </FormControl>
+                                  </Grid>
+                                  <Grid
+                                    item
+                                    md={3}
+                                    xs={12}
+                                  >
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">Tipo de compra</InputLabel>
+                                      <Select
+                                        id="demo-simple-select-label"
+                                        disabled={user.UserType == "4"}
+                                        value={buyerTypeSelected?.toString()}
+                                        onChange={handleBuyerTypeChange}
+                                        input={<OutlinedInput label="Tipo de compra" />}
+                                        MenuProps={MenuProps}
+                                      >
+                                        {buyerTypes && buyerTypes.map((name) => (
+                                          <MenuItem key={name.tipoCompra_id} value={name.tipoCompra_id}>
+                                            {name.tipoCompra_dsc}
+                                          </MenuItem>
+                                        ))}
+                                      </Select>
+                                    </FormControl>
+                                  </Grid>
+
+
+
+                          
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <TextField
+                                      fullWidth disabled={user.UserType == "4"}
+                                      value={comercialLongDescription}
+                                      onChange={handleComercialLongDescriptionChange}
+                                      label="Descripción Larga (maximo 40 caracteres)"
+                                      inputProps={{ maxLength: 40 }}
+                                      
+                                    />
+                                  </Grid>
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <TextField    
+                                      fullWidth disabled={user.UserType == "4"}
+                                      value={comercialShortDescription}
+                                      onChange={handleComercialShortDescriptionChange}
+                                      label="Descripción Corta (maximo 12 caracteres)"
+                                      inputProps={{ maxLength: 12 }}   
+                                    />
+                                  </Grid>
+                                  <Grid
+                                    item
+                                    md={12}
+                                    xs={12}
+                                  >
+                                    <TextField    
+                                      fullWidth disabled={user.UserType == "4"}
+                                      value={comercialPubliDescription}
+                                      onChange={handleComercialPubliDescriptionChange}
+                                      label="Descripción de Publicacion (maximo 60 caracteres)"
+                                      inputProps={{ maxLength: 60 }}
+                                    />
+                                  </Grid>  
+
+                                  <Grid
+                                    item
+                                    md={12}
+                                    xs={12}
+                                  >
+                                    <TextField    
+                                      fullWidth disabled={user.UserType == "4"}
+                                      value={comercialFonetDescription}
+                                      onChange={handleComercialFonetDescriptionChange}
+                                      label="Descripción Fonetica (maximo 60 caracteres)"
+                                      inputProps={{ maxLength: 60 }}
+                                    />
+                                  </Grid>  
+
+                                  <Grid
+                                    item
+                                    md={12}
+                                    xs={12}
+                                  >
+                                    <TextField    
+                                      fullWidth disabled={user.UserType == "4"}
+                                      value={comercialHablaDescription}
+                                      onChange={handleComercialHablaDescriptionChange}
+                                      label="Descripción Hablador (maximo 35 caracteres)"
+                                      inputProps={{ maxLength: 35 }}
+                                    />
+                                  </Grid>  
+
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <TextField    
+                                      fullWidth disabled={user.UserType == "4"}
+                                      value={UbicacionCedi}
+                                      onChange={handleUbicacionCEDIChange}
+                                      label="Ubicación CEDI"
+                                      inputProps={{ maxLength: 35 }}
+                                    />
+                                  </Grid>  
+                                  
+
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">Segmentacion Articulo</InputLabel>
+                                      <Select
+                                        id="demo-simple-select-label"
+                                        value={IdSegmentacionSelected?.toString()}
+                                        disabled={user.UserType == "4"}
+                                        onChange={handleChangeSegmentacion}
+                                        input={<OutlinedInput label="Segmentacion Articulo" />}
+                                        MenuProps={MenuProps}
+                                      >
+                                        {ASegmentacionArticulo && ASegmentacionArticulo.sort((a,b)=> a.dsSegmentacion.localeCompare(b.dsSegmentacion)).map((name) => (
+                                          <MenuItem key={name.dsSegmentacion} value={name.idSegmentacion}>
+                                            {name.dsSegmentacion}
+                                          </MenuItem>
+                                        ))}
+                                      </Select>
+                                    </FormControl>
+                                  </Grid>
+
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">Area de Manejo</InputLabel>
+                                      <Select
+                                        id="demo-simple-select-label"
+                                        value={IdAreaManejoSelected?.toString()}
+                                        disabled={user.UserType == "4"}
+                                        onChange={handleChangeAreaManejo}
+                                        input={<OutlinedInput label="Area de Manejo" />}
+                                        MenuProps={MenuProps}
+                                      >
+                                        {AareaManejo && AareaManejo.sort((a,b)=> a.dsAreaManejo.localeCompare(b.dsAreaManejo)).map((name) => (
+                                          <MenuItem key={name.dsAreaManejo} value={name.idAreaManejo}>
+                                            {name.dsAreaManejo}
+                                          </MenuItem>
+                                        ))}
+                                      </Select>
+                                    </FormControl>
+                                  </Grid>
+
+
+
+                                  <Grid mt={1}
+                                  container
+                                  spacing={3}
+                                >
+                                 
+                                </Grid>
+
+
+                                <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <TextField    
+                                      fullWidth disabled={user.UserType !== "1"}
+                                      value={ProyMenVtasUni}
+                                      onChange={handleProyMenVtasUniChange}
+                                      label="Proyeccion Mensual Ventas Unidad"
+                                      type={'number'}
+                                    />
+                                  </Grid>
+
+                                  <Grid
+                                    item
+                                    md={6}
+                                    xs={12}
+                                  >
+                                    <TextField    
+                                      fullWidth disabled={user.UserType !== "1"}
+                                      value={ProyMenVtasCol}
+                                      onChange={handleProyMenVtasColChange}
+                                      label="Proyeccion Mensual Ventas Colones"
+                                     type={'number'}
+                                    />
+                                  </Grid>
+                                  
+                                  
+                                  </>  )}
+                                  
+                                  {(user.UserType == "1" || user.UserType == "4" || user.UserType == "5") && <Fragment>
+
+                                    <Grid
+                                      item
+                                      md={3}
+                                      xs={12}
+                                    >
+                                      <Typography variant="h6">
+                                        Peri
+                                      </Typography>
+                                      <Divider sx={{ my: 2 }} />
+                                      <Grid
+                                        container
+                                        spacing={3}>
+                                        <Grid
+                                          item
+                                          md={6}
+                                          xs={12}
+                                        >
+                                          <TextField type={'number'} disabled={user.UserType == "4" ||  user.UserType == "5"} value={periCostUtility} onChange={handlePeriCostUtilityChange}
+                                            fullWidth defaultValue={0}
+                                            label="Utilidad Costo %"
+                                          />
+                                        </Grid>
+                                        <Grid
+                                          item
+                                          md={6}
+                                          xs={12}
+                                        >
+                                          <TextField type={'number'} value={periCostSale} disabled={user.UserType == "4"||  user.UserType == "5"} onChange={handlePeriCostSaleChange}
+                                            fullWidth defaultValue={0}
+                                            label="Utilidad Venta %"
+                                          />
+                                        </Grid>
+                                      </Grid>
+                                    </Grid>
+                                    <Grid
+                                      item
+                                      md={3}
+                                      xs={12}
+                                    >
+                                      <Typography variant="h6">
+                                        Super Compro
+                                      </Typography>
+                                      <Divider sx={{ my: 2 }} />
+                                      <Grid
+                                        container
+                                        spacing={3}>
+                                        <Grid
+                                          item
+                                          md={6}
+                                          xs={12}
+                                        >
+                                          <TextField defaultValue={0} disabled={user.UserType == "4" ||  user.UserType == "5"} value={supercomproCostUtility} onChange={handleSupercomproCostUtilityChange}
+                                            fullWidth type={'number'}
+                                            label="Utilidad Costo %"
+                                          />
+                                        </Grid>
+                                        <Grid
+                                          item
+                                          md={6}
+                                          xs={12}
+                                        >
+                                          <TextField
+                                            fullWidth type={'number'} defaultValue={0} disabled={user.UserType == "4" ||  user.UserType == "5"} value={supercomproCostSale} onChange={handleSupercomproCostSaleChange}
+                                            label="Utilidad Venta %"
+                                          />
+                                        </Grid>
+                                      </Grid>
+                                    </Grid>
+                                    <Grid
+                                      item
+                                      md={3}
+                                      xs={12}
+                                    >
+                                      <Typography variant="h6">
+                                        Saretto
+                                      </Typography>
+                                      <Divider sx={{ my: 2 }} />
+                                      <Grid
+                                        container
+                                        spacing={3}>
+                                        <Grid
+                                          item
+                                          md={6}
+                                          xs={12}
+                                        >
+                                          <TextField
+                                            fullWidth type={'number'} defaultValue={0} disabled={user.UserType == "4" ||  user.UserType == "5"} value={sarettoCostUtility} onChange={handleSarettoCostUtilityChange}
+                                            label="Utilidad Costo %"
+                                          />
+                                        </Grid>
+                                        <Grid
+                                          item
+                                          md={6}
+                                          xs={12}
+                                        >
+                                          <TextField
+                                            fullWidth type={'number'} disabled={user.UserType == "4" ||  user.UserType == "5"} defaultValue={0} value={sarettoCostSale} onChange={handleSarettoCostSaleChange}
+                                            label="Utilidad Venta %"
+                                          />
+                                        </Grid>
+                                      </Grid>
+                                    </Grid>
+                                    <Grid
+                                      item
+                                      md={3}
+                                      xs={12}
+                                    >
+                                      <Typography variant="h6">
+                                        Super Víquez
+                                      </Typography>
+                                      <Divider sx={{ my: 2 }} />
+                                      <Grid
+                                        container
+                                        spacing={3}>
+                                        <Grid
+                                          item
+                                          md={6}
+                                          xs={12}
+                                        >
+                                          <TextField type={'number'} disabled={user.UserType == "4" ||  user.UserType == "5"} value={superviquezCostUtility} onChange={handlesuperviquezCostUtilityChange}
+                                            fullWidth defaultValue={0}
+                                            label="Utilidad Costo %"
+                                          />
+                                        </Grid>
+                                        <Grid
+                                          item
+                                          md={6}
+                                          xs={12}
+                                        >
+                                          <TextField type={'number'} disabled={user.UserType == "4"||  user.UserType == "5"}  value={superviquezCostSale} onChange={handleSuperviqueaCostSaleChange}
+                                            fullWidth defaultValue={0}
+                                            label="Utilidad Venta %"
+                                          />
+                                        </Grid>
+                                      </Grid>
+                                    </Grid>
+
+                                    <Divider sx={{ my: 3 }} />
+                                    {(user.UserType == '4' || user.UserType == '1' ||  user.UserType == "5") &&
+                                      <Grid
+                                        item
+                                        md={12}
+                                        xs={12}
+                                      >
+                                         <SeverityPill color='info'>
+                                        <Typography variant="h6">
+                                          INFORMACION COMERCIAL
+                                        </Typography>
+                                        </SeverityPill>
+                                        <Divider sx={{ my: 2 }} />
+                                        <Grid
+                                          container
+                                          spacing={1}
+                                        >
+                                          <Grid item md={6} xs={12}>
+                                            <table>
+                                              <TableHead>
+                                                <TableRow>
+                                              
+                                                  <TableCell>DESCRIPCION</TableCell>
+                                                  
+                                                  <TableCell>MONTO %</TableCell>
+                                                  <TableCell>DESDE</TableCell>
+                                                  <TableCell>HASTA</TableCell>
+                                                </TableRow>
+
+                                              </TableHead>
+                                              <TableBody>
+                                                <TableRow>
+                                                  <TableCell>
+                                                    COSTO ¢
+                                                  </TableCell>
+                                                  <TableCell>
+                                                  <TextField type={'number'} disabled={true}
+                                                          value={product.amount?.toFixed(2)}
+                                                         
+                                                        />
+                                                    {}
+                                                  </TableCell>
+                                                  <TableCell>-</TableCell>
+                                                  <TableCell>-</TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                              <TableCell>
+                                                DESCUENTO FIJO
+                                              </TableCell>
+                                              <TableCell>
+                                                {/* {product.amount?.toFixed(2)} */}
+                                                <TextField type={'number'} disabled={true}
+                                                      value={descuentoFijo}
+                                                      
+                                                    />
+                                              </TableCell>
+                                              <TableCell>-</TableCell>
+                                              <TableCell>-</TableCell>
+                                            </TableRow>
+         
+                                                <TableRow>
+                                                  {itmDiscounts && itmDiscounts.find(q => q.ruleCode == 'INTRODUCCION') &&
+                                                    <>
+                                                      <TableCell>
+                                                        {itmDiscounts.find(q => q.ruleCode == 'INTRODUCCION')?.ruleCode}
+                                                      </TableCell>
+                                                      <TableCell>
+                                                        <TextField type={'number'} disabled={user.UserType!="1"}
+                                                          value={introduccion}
+                                                          onChange={handleIntroduccionDiscountChange}
+                                                        />
+                                                      </TableCell>
+                                                      <TableCell>
+                                                        {format(new Date(itmDiscounts.find(q => q.ruleCode == 'INTRODUCCION')?.startDate ?? new Date()), 'dd/MM/yyyy')}
+                                                      </TableCell>
+                                                      <TableCell>
+                                                        {format(new Date(itmDiscounts.find(q => q.ruleCode == 'INTRODUCCION')?.endDate ?? new Date()), 'dd/MM/yyyy')}
+                                                      </TableCell>
+                                                    </>
+                                                  }
+                                                </TableRow>
+          
+                                                <TableRow>
+                                                  {itmDiscounts && itmDiscounts.find(q => q.ruleCode == 'IMPUESTO') &&
+                                                    <>
+                                                      <TableCell>
+                                                        {itmDiscounts.find(q => q.ruleCode == 'IMPUESTO')?.ruleCode} %
+                                                      </TableCell>
+                                                      <TableCell>
+                                                        {itmDiscounts.find(q => q.ruleCode == 'IMPUESTO')?.value}
+                                                      </TableCell>
+                                                      <TableCell>
+                                                        {format(new Date(itmDiscounts.find(q => q.ruleCode == 'IMPUESTO')?.startDate ?? new Date()), 'dd/MM/yyyy')}
+                                                      </TableCell>
+                                                      <TableCell>
+                                                        {format(new Date(itmDiscounts.find(q => q.ruleCode == 'IMPUESTO')?.endDate ?? new Date()), 'dd/MM/yyyy')}
+                                                      </TableCell>
+                                                    </>
+                                                  }
+                                                </TableRow>
+
+                                              </TableBody>
+                                            </table>
+                                          </Grid>
+                                          <Grid item md={6} xs={12}>
+                                            <Table>
+                                              <TableHead>
+                                                <TableRow>
+                                                  <TableCell>
+                                               
+                                                    Costo Neto ¢
+                                                  
+                                                  </TableCell>
+                                                  <TableCell>
+                                                
+                                                  {grossCostAmount}
+                                                  
+                                                  
+                                                  </TableCell>
+                                                  <TableCell>
+                                                
+                                                  Nuevo Precio ¢
+                                                 
+                                                   
+                                                  </TableCell>
+                                                </TableRow>
+                                              </TableHead>
+                                              <TableBody>
+                                                <TableRow>
+                                                  <TableCell>
+                                                  <TextField size="medium"
+                                                      fullWidth={false}
+                                                      value={periSinIVA} disabled
+                                                      type={'number'}
+                                                      label="PERI SIN IVA"
+                                                    />
+                                                  
+                                                  </TableCell>
+
+                                                  <TableCell>
+                                                  <TextField size="medium"
+                                                      fullWidth={false}
+                                                      value={periConIVA} disabled
+                                                      type={'number'}
+                                                      label="PERI CON IVA"
+                                                    />
+                                                  
+                                                
+                                                  </TableCell>
+                                                    
+                                                  
+                                                  <TableCell>
+                                                    <TextField size="medium"
+                                                      fullWidth={false}
+                                                      value={periPrice} disabled={user.UserType == "5" || user.UserType == "4"  }
+                                                      type={'number'}
+                                                      onChange={handlePeriPriceChange}
+                                                      label="Precio Peri"
+                                                    />
+                                                  </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                <TableCell>
+                                                  <TextField size="medium"
+                                                      fullWidth={false}
+                                                      value={supercomproSinIVA} disabled
+                                                      type={'number'}
+                                                      label="SUPER COMPRO SIN IVA"
+                                                    />
+                                                  
+                                                  </TableCell>
+
+                                                  <TableCell>
+                                                  <TextField size="medium"
+                                                      fullWidth={false}
+                                                      value={supercomproConIVA} disabled
+                                                      type={'number'}
+                                                      label="SUPER COMPRO CON IVA"
+                                                    />
+                                                  
+                                                
+                                                  </TableCell>
+                                                 
+                                                  <TableCell>
+                                                    <TextField
+                                                      fullWidth
+                                                      value={superPrice} disabled={user.UserType == "5"  || user.UserType == "4" }
+                                                      type={'number'}
+                                                      onChange={handleSuperPriceChange}
+                                                      label="Precio Supercompro"
+                                                    />
+                                                  </TableCell>
+                                                </TableRow>
+                                                <TableRow>
+
+                                                <TableCell>
+                                                  <TextField size="medium"
+                                                      fullWidth={false}
+                                                      value={sarettoSinIVA} disabled
+                                                      type={'number'}
+                                                      label="SARETTO SIN IVA"
+                                                    />
+                                                  
+                                                  </TableCell>
+
+                                                  <TableCell>
+                                                  <TextField size="medium"
+                                                      fullWidth={false}
+                                                      value={sarettoConIVA} disabled
+                                                      type={'number'}
+                                                      label="SARETTO CON IVA"
+                                                    />
+                                                  
+                                                
+                                                  </TableCell>
+                                                
+                                                
+                                                  <TableCell>
+                                                    <TextField
+                                                      fullWidth
+                                                      value={sarettoPrice} disabled={user.UserType == "5"  || user.UserType == "4" }
+                                                      type={'number'}
+                                                      onChange={handleSarettoPriceChange}
+                                                      label="Precio Saretto"
+                                                    />
+                                                  </TableCell>
+                                                </TableRow>
+
+                                                <TableRow>
+
+                                                <TableCell>
+                                                  <TextField size="medium"
+                                                      fullWidth={false}
+                                                      value={superviquezSinIVA} disabled
+                                                      type={'number'}
+                                                      label="SUPER VIQUEZ SIN IVA"
+                                                    />
+                                                  
+                                                  </TableCell>
+
+                                                  <TableCell>
+                                                  <TextField size="medium"
+                                                      fullWidth={false}
+                                                      value={superviquezConIVA} disabled
+                                                      type={'number'}
+                                                      label="SUPER VIQUEZ CON IVA"
+                                                    />
+                                                  
+                                                
+                                                  </TableCell>
+                                                
+                                                 
+                                                  <TableCell>
+                                                    <TextField size="medium"
+                                                      fullWidth={false}
+                                                      value={superviquezPrice} disabled={user.UserType == "5"  || user.UserType == "4" }
+                                                      type={'number'}
+                                                      onChange={handleSuperViquezPriceChange}
+                                                      label="Precio Super Viquez"
+                                                    />
+                                                  </TableCell>
+                                                </TableRow>
+
+                                              </TableBody>
+                                            </Table>
+                                          </Grid>
+                                        </Grid>
+                                      </Grid>
+                                    }
+
+                              {((product.CambioPrecio != true) && <>
+
+                                <Grid
+                                      item
+                                      md={12}
+                                      xs={12}>
+                                          <SeverityPill color='info'>
+                                        <Typography variant="h6">
+                                          CADENAS
+                                        </Typography>
+                                        </SeverityPill>
+                                        <Divider sx={{ my: 2 }} />
+                                        </Grid>
+                                    <Grid
+                                      item
+                                      md={6}
+                                      xs={12}>
+                                         
+                                      <Box
+                                        sx={{
+                                          display: 'flex',
+                                          justifyContent: 'flex-start',
+                                          mb: 3
+                                        }}
+                                      >
+                                        <div>
+                                          <Typography variant="subtitle1">
+                                            Cadena PERIMERCADOS
+                                          </Typography>
+                                        </div>
+                                        <Switch checked={perichecked} disabled={user.UserType == "4"} onChange={handleperichecked} />
+                                      </Box>
+                                      <FormControl variant="standard" sx={{ m: 2, minWidth: 400, maxWidth: 400 }}>
+
+                                        <InputLabel id="demo-multiple-checkbox-label">Cadena PERIMERCADOS</InputLabel>
+                                        <Select
+                                          labelId="demo-multiple-checkbox-label"
+                                          id="demo-multiple-checkbox"
+                                          multiple
+                                          value={perimercadosSelected}
+                                          onChange={handleChangePOSPerimercados}
+                                          input={<OutlinedInput label="Cadena PERIMERCADOS" />}
+                                          renderValue={(selected) => selected.join(', ')}
+                                          MenuProps={MenuProps}
+                                        >
+                                          {perimercados.map((name) => (
+                                            <MenuItem key={name} value={name}>
+                                              <Checkbox checked={perimercadosSelected.indexOf(name) > -1} />
+                                              <ListItemText primary={name} />
+                                            </MenuItem>
+                                          ))}
+                                        </Select>
+                                      </FormControl>
+                                    </Grid>
+
+
+
+
+                                    <Grid
+                                      item
+                                      md={6}
+                                      xs={12}
+                                    >
+                                      <Box
+                                        sx={{
+                                          display: 'flex',
+                                          justifyContent: 'flex-start',
+                                          mb: 3
+                                        }}
+                                      >
+                                        <div>
+                                          <Typography variant="subtitle1">
+                                            Cadena SARETTO
+                                          </Typography>
+                                        </div>
+                                        <Switch checked={sarettochecked} disabled={user.UserType == "4"} onChange={handlesarettochecked} />
+                                      </Box>
+                                      <FormControl variant="standard" sx={{ m: 2, minWidth: 400, maxWidth: 400 }}>
+
+                                        <InputLabel id="demo-multiple-checkbox-label">Cadena SARETTO</InputLabel>
+                                        <Select
+                                          labelId="demo-multiple-checkbox-label"
+                                          id="demo-multiple-checkbox"
+                                          multiple
+                                          value={sarettoSelected}
+                                          onChange={handleChangePOSSaretto}
+                                          input={<OutlinedInput label="Cadena SARETTO" />}
+                                          renderValue={(selected) => selected.join(', ')}
+                                          MenuProps={MenuProps}
+                                        >
+                                          {saretto.map((name) => (
+                                            <MenuItem key={name} value={name}>
+                                              <Checkbox checked={sarettoSelected.indexOf(name) > -1} />
+                                              <ListItemText primary={name} />
+                                            </MenuItem>
+                                          ))}
+                                        </Select>
+                                      </FormControl>
+                                    </Grid>
+                                    <Grid
+                                      item
+                                      md={6}
+                                      xs={12}>
+                                      <Box
+                                        sx={{
+                                          display: 'flex',
+                                          justifyContent: 'flex-start',
+                                          mb: 3
+                                        }}
+                                      >
+                                        <div>
+                                          <Typography variant="subtitle1">
+                                            Cadena SUPER COMPRO
+                                          </Typography>
+                                        </div>
+                                        <Switch checked={supercomprochecked} disabled={user.UserType == "4"} onChange={handlesupercomprochecked} />
+                                      </Box>
+                                      <FormControl variant="standard" sx={{ m: 2, minWidth: 400, maxWidth: 400 }}>
+
+                                        <InputLabel id="demo-multiple-checkbox-label">Cadena SUPERCOMPRO</InputLabel>
+                                        <Select
+                                          labelId="demo-multiple-checkbox-label"
+                                          id="demo-multiple-checkbox"
+                                          multiple
+                                          value={supercomproSelected}
+                                          onChange={handleChangePOSSuperCompro}
+                                          input={<OutlinedInput label="Cadena SUPERCOMPRO" />}
+                                          renderValue={(selected) => selected.join(', ')}
+                                          MenuProps={MenuProps}
+                                        >
+                                          {supercompro.map((name) => (
+                                            <MenuItem key={name} value={name}>
+                                              <Checkbox checked={supercomproSelected.indexOf(name) > -1} />
+                                              <ListItemText primary={name} />
+                                            </MenuItem>
+                                          ))}
+                                        </Select>
+                                      </FormControl>
+                                    </Grid>
+                                    <Grid
+                                      item
+                                      md={6}
+                                      xs={12}>
+                                      <Box
+                                        sx={{
+                                          display: 'flex',
+                                          justifyContent: 'flex-start',
+                                          mb: 3
+                                        }}
+                                      >
+                                        <div>
+                                          <Typography variant="subtitle1">
+                                            Cadena SUPER VIQUEZ
+                                          </Typography>
+                                        </div>
+                                        <Switch checked={superviquezchecked} disabled={user.UserType == "4"} onChange={handlesuperviquezchecked} />
+                                      </Box>
+                                      <FormControl variant="standard" sx={{ m: 2, minWidth: 400, maxWidth: 400 }}>
+
+                                        <InputLabel id="demo-multiple-checkbox-label">Cadena SUPER VIQUEZ</InputLabel>
+                                        <Select
+                                          labelId="demo-multiple-checkbox-label"
+                                          id="demo-multiple-checkbox"
+                                          multiple
+                                          value={superviquezSelected}
+                                          onChange={handleChangePOSSuperviquez}
+                                          input={<OutlinedInput label="Cadena SUPER VIQUEZ" />}
+                                          renderValue={(selected) => selected.join(', ')}
+                                          MenuProps={MenuProps}
+                                        >
+                                          {superviquez.map((name) => (
+                                            <MenuItem key={name} value={name}>
+                                              <Checkbox checked={superviquezSelected.indexOf(name) > -1} />
+                                              <ListItemText primary={name} />
+                                            </MenuItem>
+                                          ))}
+                                        </Select>
+                                      </FormControl>
+                                    </Grid>       </>)}
+                                    
+                                    </Fragment>}
+                                </Grid>
+                              </Grid>
+                            </Grid>
+
+                          </CardContent>
+
+                            {(user.UserType == "2"  || user.UserType == "4" || user.UserType == "1") &&    // verificar aqui 
+                              <>
+                                <Divider />
+                                <Box
+                                  sx={{
+                                    display: 'flex',
+                                    flexWrap: 'wrap',
+                                    px: 2,
+                                    py: 1
+                                  }}
+                                >
+                                  <Button
+                                    onClick={handleUpdateComercialDataProduct}
+                                    sx={{ m: 1 }}
+                                    type="submit"
+                                    variant="contained"
+                                  >
+                                     {/* <-- Actualiza el ADC datos Informacion Comercial */}
+                                    Actualizar Uso Comercial
+                                  </Button>
+                                  <Button
+                                    onClick={handleCancelEdit}
+                                    sx={{ m: 1 }}
+                                    variant="outlined"
+                                  >
+                                    Cancelar
+                                  </Button>
+                                </Box>
+                              </>
+                            }  </>}
+                          <Divider />
+                          {(user.UserType == "1" || user.UserType == "4")
+                            && <CardContent>
+                              <Grid container spacing={2}>
+                                <Grid item md={11} xs={12}>
+
+                                  <Divider sx={{ my: 2 }} />
+                                  <Grid container spacing={3}>
+                                    <Grid item md={6} xs={12}>
+                                      {
+                                        (product.ComercialLongDescription && product.ComercialLongDescription.length > 0
+                                          && product.ComercialPubliDescription && product.ComercialPubliDescription.length > 0
+                                          && product.ComercialShortDescription && product.ComercialShortDescription.length > 0)
+                                        && <Button onClick={handleAccept} sx={{ backgroundColor: 'success.main', mr: 3, '&:hover': { backgroundColor: 'success.dark' } }} variant="contained" > {user.UserType == "2" ? 'Enviar a ADC' : 'Aprobar'}
+                                        </Button>
+                                        // ESTE BOTON APRUEBA LA INFORMACION COMERCIAL DENTRO USUARIO ADC (userType=2) 
+                                      }
+                                      {
+                                        (!product.ComercialPubliDescription || product.ComercialPubliDescription.length <= 0 ||!product.ComercialLongDescription || product.ComercialLongDescription.length <= 0 || !product.ComercialShortDescription || product.ComercialShortDescription.length <= 0) &&
+                                        <Button disabled onClick={handleAccept} sx={{ backgroundColor: 'success.main', mr: 3, '&:hover': { backgroundColor: 'success.dark' } }} variant="contained" > {user.UserType == "2" ? 'Enviar a ADC' : ''}
+                                        </Button>
+                                      }
+                                      {user.UserType != "2" && <Button onClick={handleReject} sx={{ backgroundColor: 'error.main', mr: 3, '&:hover': { backgroundColor: 'error.dark' } }} variant="contained" >
+                                        Rechazar
+                                      </Button>}
+                                    </Grid>
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                            </CardContent>
+                          }
+                        </Fragment>}
+                        <CardContent>
+                          <Grid
+                            container
+                            spacing={3}
+                          >
+                            <Grid
+                              item
+                              md={12}
+                              xs={12}
+                            >
+                                <SeverityPill color='error'>
+                                <Typography variant="h6">
+                                  OTROS DATOS
+                                  </Typography>
+                                  </SeverityPill>
+
+                                  
+                               
+                          
+                              <Divider sx={{ my: 2 }} />
+
+
+                              {(user.UserType != '3') &&
+                                      <>
+
+<Grid
+                            container
+                            spacing={3}
+                          >
+                            {posts.filter(q=>q.cover!='/static/mock-images/covers/caja.png' ).map((post) => (
+                              
+                          
+
+                              <Grid
+                                item
+                                key={post.id} 
+                                md={4}
+                                xs={12}
+                              >
+                                <Card
+                                  sx={{
+                                    height: '100%',
+                                    p: 2
+                                  }}
+                                >
+                                  <BlogPostCardMediaWrapper>
+                                    <CardMedia
+                                      image={post.cover}
+                                      
+                                      sx={{
+                                        height: '80%',
+                                        position: 'absolute',
+                                        top: 0,
+                                        width: '80%'
+                                      }}
+                                    />
+                                  </BlogPostCardMediaWrapper>
+                                  <Box sx={{ mt: 2 }}>
+                                    <div>
+                                      <Chip
+                                        avatar={<Avatar>{post.category}</Avatar>} 
+                                        color="primary"
+                                        label={post.title}
+                                        size="medium"
+                                       
+                                      />
+                                    </div>
+                                    <Box
+                                      sx={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        my: 2
+                                      }}
+                                    >
+                                  
+                                    
+                                    </Box>
+                                  
+                                
+                                  </Box>
+                                  <Box>
+                                
+                                
+                                  </Box>
+                                </Card>
+                              </Grid>
+                            ))}
+                          </Grid>
+                      
+                      
+                                                    {/* fin fotos */}
+
+
+
+
+                            </>
+                                    }
+                              <Grid
+                                container
+                                spacing={2}>
+                                <Grid
+                                  item
+                                  md={6}
+                                  xs={12}>
+                                  <Box
+                                    sx={{
+                                      display: 'flex',
+                                      flexWrap: 'wrap',
+                                      px: 2,
+                                      py: 1
+                                    }}>
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Categoria clasificacion"
+                                      value={`${product.classificationCategoryCode} - ${product.classificationCategoryDesc}`}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Fecha de disponibilidad"
+                                      value={`del ${product.startAvailabilityDateTime} al ${product.endAvailabilityDateTime}`}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Nombre funcional"
+                                      value={product.functionalName}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Tipo de empaque"
+                                      value={product.packagingTypeDesc}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Descripcion del Producto"
+                                      value={product.tradeItemDescription}
+                                    />
+                                     <PropertyListItem
+                                      disableGutters
+                                      label="Marca"
+                                      value={product.brandName}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Pais de origen"
+                                      value={product.tradeItemCountryOfOrigin}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Pais objetivo"
+                                      value={product.targetMarketCountryCode}
+                                    />
+                                       <PropertyListItem
+
+                                      disableGutters
+                                      label="Codigo Cabys"
+
+                                      value={(product.cabysCode ?? "No asignado") !== "" ? product.cabysCode : "No asignado"}
+                                      />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Tipo de compra"
+                                      value={product.tipoCompra_dsc}
+                                    />
+                                  
+
+
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Subcategoria"
+                                      value={product.subcategoria_dsc}
+                                    />
+                                    <PropertyListItem
+
+                                    disableGutters
+                                    label="Dun 14"
+
+                                    value={(product.Dun14 ?? "No asignado") !== "" ? product.Dun14 : "No asignado"}
+                                    />
+                                      <PropertyListItem
+
+                                      disableGutters
+                                      label="Cantidad x Caja"
+
+                                      value={(product.netContent_logist) ?  product.netContent_logist.toString() :''   }
+                                      />
+                                      <PropertyListItem
+
+                                      disableGutters
+                                      label="Alto Caja"
+
+                                      value={(product.height_logist) ? product.height_logist.toString() : ''}
+                                      />
+
+                                      <PropertyListItem
+                                      disableGutters
+                                      label="Ancho Caja"
+                                      value={(product.width_logist)? product.width_logist.toString(): ''}
+                                      />
+                                      <PropertyListItem
+                                      disableGutters
+                                      label="Fondo Caja"
+                                      value={(product.depth_logist) ? product.depth_logist.toString(): ''}
+                                      />
+                                      <PropertyListItem
+                                      disableGutters
+                                      label="Peso Caja"
+                                      value={(product.grossWeight_logist) ? product.grossWeight_logist.toString(): ''}
+                                      />
+                                      <PropertyListItem
+                                      disableGutters
+                                      label="Tipo Descripcion Caja"
+                                      value={(product.packagingTypeDesc_logist) ? product.packagingTypeDesc_logist.toString(): ''}
+                                      />
+                                      <PropertyListItem
+                                      disableGutters
+                                      label="Unidad Medida Caja"
+                                      value={(product.netContentUnitOfMeasure_logist) ? product.netContentUnitOfMeasure_logist.toString(): ''}
+                                      />
+                                      <PropertyListItem
+                                      disableGutters
+                                      label="Unidad Longitud Caja"
+                                      value={(product.lengthUnitOfMeasure_logist) ? product.lengthUnitOfMeasure_logist.toString(): ''}
+                                      />
+                                      <PropertyListItem
+                                      disableGutters
+                                      label="Unidad Peso Caja"
+                                      value={(product.weightUnitOfMeasure_logist) ? product.weightUnitOfMeasure_logist.toString(): ''}
+                                      />
+   
+                                    {(user.UserType != "3" && user.UserType != "1") &&
+                                      <>
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Punto de venta"
+                                          value={product.puntoVenta_dsc ?? "No asignado"}
+                                        />
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Descripcion larga"
+                                          
+                                          value={(product.ComercialLongDescription ?? "No asignado") !== "" ? product.ComercialLongDescription : "No asignado"}
+                                        />
+
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Descripcion Corta"
+                                          
+                                          value={(product.ComercialShortDescription ?? "No asignado") !== "" ? product.ComercialShortDescription : "No asignado"}
+                                        />
+
+                                        <PropertyListItem
+
+                                          disableGutters
+                                          label="Descripcion de publicacion"
+                                        
+                                          value={(product.ComercialPubliDescription ?? "No asignado") !== "" ? product.ComercialPubliDescription : "No asignado"}
+                                        />
+                                         <PropertyListItem
+
+                                        disableGutters
+                                        label="Descripcion Fonetica"
+
+                                        value={(product.ComercialFonetDescription ?? "No asignado") !== "" ? product.ComercialFonetDescription : "No asignado"}
+                                        />
+                                        <PropertyListItem
+
+                                        disableGutters
+                                        label="Descripcion Hablador"
+
+                                        value={(product.ComercialHablaDescription ?? "No asignado") !== "" ? product.ComercialHablaDescription : "No asignado"}
+                                        />
+                                      
+                                      
+
+ 
+                                      </>
+                                    }
+
+                                    {(user.UserType == '4') &&
+                                      <>
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Supercompro Utilidad Venta"
+                                          value={(product.SupercomproCostSale)?.toString()}
+                                        />
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Supercompro Utilidad Costo"
+                                          value={(product.SupercomproCostUtility)?.toString()}
+                                        />
+                                      </>
+                                    }
+                                  </Box>
+
+                                </Grid>
+                                <Grid
+                                  item
+                                  md={6}
+                                  xs={12}>
+                                  <Box
+                                    sx={{
+                                      display: 'flex',
+                                      flexWrap: 'wrap',
+                                      px: 2,
+                                      py: 1
+                                    }}>
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Variante"
+                                      value={product.variantDescription == '' ? 'No tiene variante' : product.variantDescription}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Peso neto"
+                                      value={`${product.netContent} ${product.netContentUnitOfMeasure}`}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Peso bruto"
+                                      value={`${product.grossWeight} ${product.weightUnitOfMeasure}`}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Alto Ancho Profundo"
+                                      value={`${product.height} X ${product.width} X ${product.depth} ${product.lengthUnitOfMeasure}`}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Descripcion de publicación"
+                                      value={product.descriptionShort}
+                                    />
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Contacto"
+                                      value={product.contactName == '' ? 'No definido' : product.contactName}
+                                    />
+                                    
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Identificacion de permiso de regulacion"
+                                      value={product.regulatoryPermitIdentification}
+                                    />
+                                      <PropertyListItem
+
+                                      disableGutters
+                                      label="Descripcion Cabys"
+
+                                      value={(product.cabysDesc ?? "No asignado") !== "" ? product.cabysDesc : "No asignado"}
+                                      />
+                                    
+                                    <PropertyListItem
+                                      disableGutters
+                                      label="Categoria"
+                                      value={product.categoria_dsc}
+                                    />
+                                   
+                                    <Box
+                                      sx={{
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        mb: 3
+                                      }}
+                                    >
+                                      <div>
+                                        <Typography>
+                                          Compra en unidad
+                                        </Typography>
+                                      </div>
+                                      <Switch checked={product.CompraEnUnidad} />
+                                    </Box>
+                           
+
+
+                                    
+                                    {(user.UserType == '4') &&
+                                      <>
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Peri Utilidad Venta"
+                                          value={(product.PeriCostSale)?.toString()}
+                                        />
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Peri Utilidad Costo"
+                                          value={(product.PeriCostUtility)?.toString()}
+                                        />
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Saretto Utilidad Venta"
+                                          value={(product.SarettoCostSale)?.toString()}
+                                        />
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Saretto Utilidad Costo"
+                                          value={(product.SarettoCostUtility)?.toString()}
+                                        />
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Saretto Utilidad Costo"
+                                          value={(product.sarettoPrice)?.toString()}
+                                        />
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Saretto Utilidad Costo"
+                                          value={(product.superPrice)?.toString()}
+                                        />
+                                        <PropertyListItem
+                                          disableGutters
+                                          label="Saretto Utilidad Costo"
+                                          value={(product.periPrice)?.toString()}
+                                        />
+                                      </>
+                                    }
+                                  </Box>
+
+                                </Grid>
+
+                              </Grid>
+                            </Grid>
+                          </Grid>
+                        </CardContent>
+                      </TableCell>
+                    </TableRow>
+                  )}
+                </Fragment>
+              );
+            })}
+          </TableBody >
+        </Table >
+      </Scrollbar >
+      <TablePagination
+        component="div"
+        count={productsCount}
+        onPageChange={onPageChange}
+        onRowsPerPageChange={onRowsPerPageChange}
+        page={page}
+        rowsPerPage={rowsPerPage}
+        rowsPerPageOptions={[5, 10, 25]}
+      />
+    </div >
+  );
+};
+
+ProductListTable.propTypes = {
+  products: PropTypes.array.isRequired,
+  productsCount: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
+  onRowsPerPageChange: PropTypes.func,
+  page: PropTypes.number.isRequired,
+  rowsPerPage: PropTypes.number.isRequired
+};
+
+
+
+
+
+
+
+
+
+
+
+
+import { Category, CategoryResponse, GetCategoryResponse } from 'src/types/APIcategory';
+import { GetSubCategoryResponse, SubCategory, SubCategoryResponse } from 'src/types/APISubCategory';
+import { BuyerType, GetBuyerTypesResponse } from 'src/types/buyerTypes';
+import { GetPOS, Po } from 'src/types/pos';
+import type { GetProductResponse, Item, ProductResponse,GetFotoResponse, ItemFoto } from '../types/product';
+import type { GetProductNewResponse, Articulo, ProductNewResponse } from '../types/product-new';
+import {Marca,MarcaResponse,GetMarcaResponse} from 'src/types/APImarcas'
+import {GetMercadoOrigenResponse,MercadoOrigen,MercadoOrigenResponse} from 'src/types/APImercadoOrigen'
+import {GetPlazosPagoResponse,PlazosPago,PlazosPagoResponse} from 'src/types/APIplazosPago'
+import {GetTipoCompraResponse,TipoCompra,TipoCompraResponse} from 'src/types/APItiposCompra'
+import {GetTiposGravadosResponse,TiposGravados,TiposGravadosResponse} from 'src/types/APItiposgravados'
+import {GetUnidadEmpaqueResponse,UnidadEmpaque,UnidadEmpaqueResponse} from 'src/types/APIunidadempaque'
+import {GetProveedorResponse,Proveedor,ProveedoresResponse} from 'src/types/APIproveedores'
+import {GetProveedorsolResponse,Proveedorsol,ProveedoresolResponse} from 'src/types/APIproveedores'
+import {GetTiposRegistroResponse,TiposRegistro,TiposRegistroResponse} from 'src/types/APITiposRegistro'
+
+import {getAsuntosResponse,Asunto,AsuntosResponse} from 'src/types/APIasuntos'
+import {getMensajesResponse,ReportesResponse,Mensajes,MensajesResponse, Reportes} from 'src/types/APImensajes'
+
+import API from './API';
+import { IitemDiscounts, ItemsDiscount } from 'src/types/IitemDiscounts';
+import { IRuleType } from 'src/types/IRuleType';
+
+import { ActividadEconomica, ActividadEconomicaResponse } from 'src/types/APIactividadEconomica';
+import { CantonDistritoProvincia, CantonDistritoProvinciaResponse } from 'src/types/APIcantondistritoProvincia';
+import { ConstructionOutlined } from '@mui/icons-material';
+
+
+
+const now = new Date();
+
+export enum ProductStatus {
+  REJECT = -1,
+  ACCEPT = 1,
+}
+
+class ProductsApi {
+
+
+
+  
+  async getProducts(): Promise<Item[]> {
+    
+    const token = localStorage.getItem('accessToken');
+    API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    const result = await API.get<ProductResponse>('gsone/getItems');
+    return Promise.resolve(result.data.items);
+  }
+
+
+  async getProduct(gtin: string): Promise<Item> {
+    const result = await API.get<GetProductResponse>('gsone/getItem', { params: { gtin: gtin } });
+   // console.log('DATOS IMAGEN',result.data.item.FotoProductoArribaBAse)
+    return Promise.resolve(result.data.item);
+  }
+
+
+  async getFotos(gln: string,gtin: string, CambioPrecios:boolean): Promise<ItemFoto[]> {
+    // console.log('ya entre')
+    // console.log(gln,gtin)
+    console.log('-----------------------------------------------------------------')
+    const result = await API.get<GetFotoResponse>('gsone/getFotos', { params: {gln:gln, gtin: gtin,CambioPrecios:CambioPrecios } });
+    // console.log('DATOS IMAGEN',result.data.items)
+    return Promise.resolve(result.data.items);
+  }
+
+
+
+
+  async getProductsCambPrecio(gln:string): Promise<Item[]> {
+    console.log('ya entre')
+    //const token = localStorage.getItem('accessToken');
+    //API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    const result = await API.get<ProductResponse>('gsone/getItemsCambPrecios', { params: { gln: gln } });
+    console.log('DATOS',result.data.items)
+    return Promise.resolve(result.data.items);
+  }
+
+
+
+  async getPOS(): Promise<Po[]> {
+    const result = await API.get<GetPOS>('gsone/getPOS');
+    return Promise.resolve(result.data.POS);
+  }
+  //GetProductResponse
+  async getCategories(): Promise<Category[]> {
+    const result = await API.get<CategoryResponse>('gsone/getCategories');
+    return Promise.resolve(result.data.categories);
+  }
+
+  
+
+async getCateXProveedor(gln: number): Promise<Category[]> {
+  console.log('Parametro',gln)
+  const result = await API.get<CategoryResponse>('gsone/getCateXProveedor', { params: { gln: gln } });
+  console.log('datos inic', result.data.categories)
+  return Promise.resolve(result.data.categories);
+}
+
+
+  async getSubCategories(CategoryId: number): Promise<SubCategory[]> {
+    const result = await API.get<SubCategoryResponse>('gsone/getSubCategories', { params: { categoryId: CategoryId } });
+    return Promise.resolve(result.data.subCategories);
+  }
+
+  async getSubCategory(CategoryId: number, SubcategoryId: number): Promise<SubCategory> {
+    const result = await API.get<GetSubCategoryResponse>('gsone/getSubCategory', { params: { categoryId: CategoryId, subcategoryId: SubcategoryId } });
+    return Promise.resolve(result.data.SubCategory);
+  }
+  async getCategory(CategoryId: number): Promise<Category> {
+    const result = await API.get<GetCategoryResponse>('gsone/getCategory', { params: { categoryId: CategoryId } });
+    return Promise.resolve(result.data.Category);
+  }
+  async getRuleType(id: string): Promise<string> {
+    const result = await API.get<IRuleType>('gsone/getRuleCodeType', { params: { id: id } });
+    return Promise.resolve(result.data.RuleCodeType.Description)
+  }
+  async addCategory(category: string): Promise<any> {
+    const result = await API.put<CategoryResponse>('gsone/addCategory', { category });
+    return Promise.resolve(result.data);
+  }
+  async updateProduct(gtin: string, categoryId: number, SubCategoryId: number,TipoRegistro_ID: number, buyerType: number, 
+                      FotoProductoFrente: any,FotoProductoLado: any,FotoProductoArribaBase: any,
+                      FotoProducto4:any,FotoProducto5:any,
+                      amountCosto: any, unitBuy: boolean,AceptaDevoluciones:boolean,skuSustitucion:string): Promise<any> {
+    console.log('datos en api',gtin, categoryId, SubCategoryId, TipoRegistro_ID ,buyerType, FotoProductoFrente,amountCosto)
+    //alert('Pare aqui')
+    const result = await API.patch<any>('gsone/updateProduct', { gtin, categoryId, SubCategoryId, TipoRegistro_ID ,buyerType, 
+                                                                 FotoProductoFrente,FotoProductoLado,FotoProductoArribaBase,FotoProducto4,
+                                                                 FotoProducto5,amountCosto,unitBuy,AceptaDevoluciones,skuSustitucion });
+    return Promise.resolve(result.data);
+  }
+
+  async updateProductCambioPrecios(gtin: string, amountCosto: any): Promise<any> {
+    console.log('datos en api',gtin, amountCosto)
+    //alert('Pare aqui')
+    const result = await API.patch<any>('gsone/updateProductCambioPrecios', { gtin, amountCosto });
+    return Promise.resolve(result.data);
+  }
+
+
+  async updateCode(gtin: string, itmCode: string): Promise<any> {
+    const result = await API.patch<any>('gsone/updateCode', { gtin, itmCode });
+    return Promise.resolve(result.data);
+  }
+
+  async updateDiscounts( gtin: string,
+    ruleType: string,
+    ruleCode: string,
+    value: string,
+    type: string,
+    startDate: string,
+    endDate: string,
+    secuency: string,
+    ): Promise<any> {
+    //console.log('datos en api')
+    
+    const result = await API.patch<any>('gsone/createDiscounts', { gtin, ruleType, ruleCode, value,type ,startDate, endDate,secuency });
+    return Promise.resolve(result.data);
+  }
+  
+
+
+
+
+  
+  //
+  async updateProductComercialData(gtin: string, comercialLongDescription: string, comercialShortDescription: string,comercialPubliDescription: string, 
+    comercialFonetDescription: string, comercialHablaDescription: string,periCostSale: number,
+    periCostUtility: number, sarettoCostSale: number, sarettoCostUtility: number, supercomproCostUtility: number, PosID: number,
+    supercomproCostSale: number, periSelected: string, sarettoSelected: string, superComproSelected: string, priceFixed: number, superPrice: number,
+    sarettoPrice: number, periPrice: number, PeriSinIVA: number, PeriConIVA: number, SupercomproSinIVA: number, SupercomproConIVA: number, SarettoSinIVA: number, SarettoConIVA: number,
+    confidencial: number, introduccion: number, fijo: number, promocional: number ,ddc :number, nodevolucion:number,
+    superviquezCostSale:number, superviquezCostUtility:number,superviquezPrice:number,superviquezSinIVA:number, superviquezConIVA:number,
+    superviquezSelected: string,SegmentacionArticulo: number,tipoRegistroIdSelected:number,buyerTypeSelected:number,AreaManejo:number,UbicacionCedi:string,
+    ProyMenVtasUni:number, ProyMenVtasCol:number,checked:boolean 
+    
+    
+    
+    
+    ): Promise<any> {
+    const result = await API.patch<any>('gsone/updateProductComercialData', {
+      gtin, comercialLongDescription, comercialShortDescription, comercialPubliDescription,
+      comercialFonetDescription,comercialHablaDescription,periCostSale,
+      periCostUtility, sarettoCostSale, sarettoCostUtility, supercomproCostUtility, PosID,
+      supercomproCostSale, periSelected, sarettoSelected, superComproSelected, priceFixed, superPrice, sarettoPrice, periPrice
+      , PeriSinIVA, PeriConIVA, SupercomproSinIVA, SupercomproConIVA, SarettoSinIVA, SarettoConIVA, 
+      confidencial, introduccion, fijo, promocional,ddc,nodevolucion,
+      superviquezCostSale,superviquezCostUtility,superviquezPrice,superviquezSinIVA,superviquezConIVA,
+      superviquezSelected,SegmentacionArticulo,tipoRegistroIdSelected,buyerTypeSelected,AreaManejo,UbicacionCedi,ProyMenVtasUni, ProyMenVtasCol
+    });
+    //console.log(superviquezCostSale,superviquezCostUtility,superviquezPrice,superviquezSinIVA,superviquezConIVA,superviquezSelected)
+    //alert('alto')
+    return Promise.resolve(result.data);
+  }
+  async addSubCategory(category: string, categoryId: number): Promise<any> {
+    const result = await API.patch<any>('gsone/addsubcategory', { category, categoryId });
+    return Promise.resolve(result.data);
+  }
+  async addStatusProduct(gtin: string, Status: ProductStatus): Promise<any> {
+    const token = localStorage.getItem('accessToken');
+    
+    API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    const result = await API.put('gsone/addItemStatus', { gtin, Status });
+    return Promise.resolve(result.data);
+  }
+  async getBuyerTypes(): Promise<BuyerType[]> {
+    const result = await API.get<GetBuyerTypesResponse>('gsone/getBuyerTypes');
+    return Promise.resolve(result.data.buyerTypes);
+  }
+  async getItemDicounts(gtin: string): Promise<ItemsDiscount[]> {
+    const result = await API.get<IitemDiscounts>('gsone/getItemDicounts', { params: { gtin: gtin } });
+    return Promise.resolve(result.data.itemsDiscounts);
+  }
+  
+  async getProveedores(): Promise<Proveedor[]> {
+    //const token = localStorage.getItemNew('accessToken')
+    //API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    const result = await API.get<ProveedoresResponse>('gsone/getProveedores');
+    //console.log(result.data )
+    //console.log(result.data.Proveedores)
+    return Promise.resolve(result.data.Proveedores);
+  }
+
+  async getProveedor(proveedor_id: string): Promise<Proveedor> {
+    const result = await API.get<GetProveedorResponse>('gsone/getProveedor', { params: { proveedor_id: proveedor_id } });
+    console.log(result)
+    return Promise.resolve(result.data.proveedor);
+  }
+
+  async getArticulos(): Promise<Articulo[]> {
+    const token = localStorage.getItem('accessToken')
+    API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    //console.log('El token es:',token)
+    const result = await API.get<ProductNewResponse>('gsone/GetArticulos');
+    return Promise.resolve(result.data.articulos);
+  }
+
+  async getArticulosChg(): Promise<Articulo[]> {
+    const token = localStorage.getItem('accessToken')
+    API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    //console.log('El token es:',token)
+    const result = await API.get<ProductNewResponse>('gsone/GetArticulosChg');
+    return Promise.resolve(result.data.articulos);
+  }
+
+  async getProveedoresol(): Promise<Proveedorsol[]> {
+    const token = localStorage.getItem('accessToken')
+    API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    const result = await API.get<ProveedoresolResponse>('gsone/getProveedoresol');
+    
+    console.log('LOS PROVEEDORES ',result.data.Proveedores)
+    return Promise.resolve(result.data.Proveedores);
+  }
+
+  async getMensajes(tipo:string): Promise<Mensajes[]> {
+    const token = localStorage.getItem('accessToken')
+    console.log('el tipo',tipo)
+    API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    const result = await API.get<MensajesResponse>('gsone/getMensajes' , { params: { tipoMsg: tipo } });
+    //alert(result)
+    console.log('MENSAJES AL API',result.data.Mensaje)
+    return Promise.resolve(result.data.Mensaje);
+  }
+
+  async getReportes(proveedor_id: string): Promise<Reportes[]> {
+    const result = await API.get<ReportesResponse>('gsone/getReportes', { params: { proveedor_id: proveedor_id } });
+    console.log(result)
+    return Promise.resolve(result.data.Reportes);
+  }
+
+  async getAsuntos(): Promise<Asunto[]> {
+    //const token = localStorage.getItemNew('accessToken')
+    //API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    const result = await API.get<AsuntosResponse>('gsone/getAsuntos');
+    console.log('resultado asuntos api:',result)
+    return Promise.resolve(result.data.asunto);
+  }
+  async createProveedor (
+    proveedor_id: string,
+    proveedor_dsc: string,
+    gln: string,
+    fechaSolicitud?: Date,
+    CedJuridica?: string,
+    RazonSocial?: string,
+    RepreLegal?: string,
+    GerenteGeneral?: string,
+    GerenteVentas?: string,
+    AgenteVentas?: string,
+    ContactoFinanc?: string,
+    Direccion?: string,
+    canton_id?: number,
+    Barrio?: string,
+    Tel1?: string,
+    Tel2?: string,
+    NombreContactoFactElec?: string,
+    TelContactoFactElec?: string,
+    EmailContactoFactElec?: string,
+    EmailReciboContactoFactElec?: string,
+    CantidadLineasXFactura?: number,
+    TipoEntrega?: number,
+    AceptaDevoluc?: boolean,
+    OrdenCompra?: boolean,
+    DescuentoFijo?: boolean,
+    PorDescuentofijo?: number,
+    DescuentoConfidencial?: boolean,
+    PorcDescuentoConfidencial?: number,
+    DescuentoIntroduccion?: boolean,
+    PorcDescuentoIntroduccion?: number,
+    PartDinamicasComerciales?: boolean,
+    PartEspaciosPromocionales?: boolean,
+    PartDisplays?: boolean,
+    FrecuenciaVisitaTiendas?: number,
+    AportaCodigoCABYS?: boolean,
+    CodigoCABYS?: string,
+    ActividadEconomicaID?: number,
+    PlazoPagoID?: number,
+    DocEntregaFacElect?: boolean,
+    DocEntregaGuiaDespacho?: boolean,
+    CambioPrecio?:boolean
+
+  )
+  : Promise<any> {
+    const result = await API.post('gsone/createProveedor', {
+      
+        proveedor_id,
+        proveedor_dsc,
+        gln,
+        fechaSolicitud ,
+        CedJuridica  ,
+        RazonSocial  ,
+        RepreLegal  ,
+        GerenteGeneral  ,
+        GerenteVentas  ,
+        AgenteVentas  ,
+        ContactoFinanc  ,
+        Direccion  ,
+        canton_id ,
+        Barrio  ,
+        Tel1  ,
+        Tel2  ,
+        NombreContactoFactElec  ,
+        TelContactoFactElec  ,
+        EmailContactoFactElec  ,
+        EmailReciboContactoFactElec  ,
+        CantidadLineasXFactura  ,
+        TipoEntrega  ,
+        AceptaDevoluc  ,
+        OrdenCompra  ,
+        DescuentoFijo  ,
+        PorDescuentofijo  ,
+        DescuentoConfidencial  ,
+        PorcDescuentoConfidencial  ,
+        DescuentoIntroduccion  ,
+        PorcDescuentoIntroduccion  ,
+        PartDinamicasComerciales  ,
+        PartEspaciosPromocionales  ,
+        PartDisplays  ,
+        FrecuenciaVisitaTiendas  ,
+        AportaCodigoCABYS  ,
+        CodigoCABYS  ,
+        ActividadEconomicaID  ,
+        PlazoPagoID  ,
+        DocEntregaFacElect  ,
+        DocEntregaGuiaDespacho  ,
+        CambioPrecio,
+
+
+    });
+    //alert(result.data)
+    return Promise.resolve(result.data);}
+
+
+    
+  async newArticulo (
+    ProveedorID: string,
+    ArticuloID: number | null,
+    DescripcionProducto: string,
+    MarcaID: number,
+    TamanoGessa: string,
+    IdUnidadEmpaque: number,
+    EAN13: string,
+    DUN14: string,
+    CompraEnUnidades: boolean,
+    DescripcionLarga: string |null,
+    DescripcionPublicacion: string |null,
+    UnidadMedida: string,
+    SaborAroma: string,
+    categoria_id: number,
+    subcategoria_id: number,
+    SegmentoID: number,
+    PlazoPagoID: number,
+    tipoCompra_id: number,
+    CabysCodigo: string,
+    CostoEmpaque: number,
+    CostoUnitario: number,
+    GravadoID: number,
+    GravadoOExento: boolean,
+    PorcImpConsumo: number,
+    TiempoVigencia: number,
+    MedProdAnchoProducto: number,
+    MedProdAltoProducto: number,
+    MedProdLargoProducto: number,
+    MedProdPesoNeto: number,
+    MedProdPesoBruto: number,
+    MedProdPesoEscurrido: number,
+    MedProdDiametro: number,
+    MedCajaAnchoProducto: number,
+    MedCajaAltoProducto: number,
+    MedCajaLargoProducto: number,
+    FotoProductoFrente: any,
+    FotoProductoLado: any,
+    FotoProductoArribaBase: any,
+    FotoProducto4:any,
+    FotoProducto5:any,
+    DescuentoConfidencialDC: number,
+    DescuentoIntroduccionDEI: number,
+    DescuentoFijoDFI: number,
+    DescuentoNoDevolucionDND: number,
+    CentroDistribucionTAE: number,
+    PromocionalPAE: number,
+    status:string ,
+    CambioPrecio: boolean,
+    ): Promise<any> {
+    const result = await API.post('gsone/createArticulo', {  
+      ProveedorID 
+      ,ArticuloID 
+      ,DescripcionProducto 
+      ,MarcaID 
+      ,TamanoGessa 
+      ,IdUnidadEmpaque 
+      ,EAN13 
+      ,DUN14 
+      ,CompraEnUnidades 
+      ,DescripcionLarga
+      ,DescripcionPublicacion
+      ,UnidadMedida 
+      ,SaborAroma 
+      ,categoria_id 
+      ,subcategoria_id 
+      ,SegmentoID 
+      ,PlazoPagoID 
+      ,tipoCompra_id 
+      ,CabysCodigo 
+      ,CostoEmpaque 
+      ,CostoUnitario 
+      ,GravadoID 
+      ,GravadoOExento 
+      ,PorcImpConsumo 
+      ,TiempoVigencia 
+      ,MedProdAnchoProducto 
+      ,MedProdAltoProducto 
+      ,MedProdLargoProducto 
+      ,MedProdPesoNeto 
+      ,MedProdPesoBruto 
+      ,MedProdPesoEscurrido 
+      ,MedProdDiametro 
+      ,MedCajaAnchoProducto 
+      ,MedCajaAltoProducto 
+      ,MedCajaLargoProducto 
+      ,FotoProductoFrente 
+      ,FotoProductoLado 
+      ,FotoProductoArribaBase 
+      ,FotoProducto4
+      ,FotoProducto5
+      ,DescuentoConfidencialDC 
+      ,DescuentoIntroduccionDEI 
+      ,DescuentoFijoDFI 
+      ,DescuentoNoDevolucionDND 
+      ,CentroDistribucionTAE 
+      ,PromocionalPAE
+      ,status
+      ,CambioPrecio
+    });
+    console.log('resultado en la app',result.data)
+    return Promise.resolve(result.data);
+  }
+  async getMarcas(): Promise<Marca[]> {
+    const result = await API.get<MarcaResponse>('gsone/getMarcas');
+    return Promise.resolve(result.data.marcas);
+  }
+
+  async getActividadEconomica(): Promise<ActividadEconomica[]> {
+    const result = await API.get<ActividadEconomicaResponse>('gsone/getActividadEconomica');
+    return Promise.resolve(result.data.actividadEcono);
+  }
+
+  async getCantonDistritoProvincia(): Promise<CantonDistritoProvincia[]> {
+    const result = await API.get<CantonDistritoProvinciaResponse>('gsone/getCantonDistritoProvincia');
+    //console.log(result)
+    return Promise.resolve(result.data.cantones);
+  }
+
+  async getMercadoOrigen(): Promise<MercadoOrigen[]> {
+    const result = await API.get<MercadoOrigenResponse>('gsone/getMercadoOrigen');
+    return Promise.resolve(result.data.MercadoOrigen);
+  }
+
+  async getPlazosPago(): Promise<PlazosPago[]> {
+    const result = await API.get<PlazosPagoResponse>('gsone/getPlazosPago');
+    return Promise.resolve(result.data.plazosPago);
+  }
+
+  async GetTipoCompra(): Promise<TipoCompra[]> {
+    const result = await API.get<TipoCompraResponse>('gsone/getTipoCompra');
+    return Promise.resolve(result.data.tipocompra);
+  }
+
+  async GetTipoRegistros(): Promise<TiposRegistro[]> {
+    const result = await API.get<TiposRegistroResponse>('gsone/getTipoRegistro');
+    return Promise.resolve(result.data.tiposregistro);
+  }
+
+  async getTiposGravados(): Promise<TiposGravados[]> {
+    const result = await API.get<TiposGravadosResponse>('gsone/getTiposGravados');
+    return Promise.resolve(result.data.tiposGravados);
+  }
+
+  async GetUnidadEmpaque(): Promise<UnidadEmpaque[]> {    
+    const result = await API.get<UnidadEmpaqueResponse>('gsone/getUnidadEmpaque');
+    return Promise.resolve(result.data.UnidadEmpaque);
+  }
+
+  
+
+  async createProveedorsol (
+    proveedor_id: number | null,
+    proveedor_dsc: string,
+    categoria_id: number,
+    CedJuridica?: string,
+    RazonSocial?: string,
+    RepreLegal?: string,
+    GerenteGeneral?: string,
+    GerenteVentas?: string,
+    AgenteVentas?: string,
+    ContactoFinanc?: string,
+    Direccion?: string,
+    canton_id?: number,
+    Barrio?: string,
+    Tel1?: string,
+    Tel2?: string,
+    NombreContactoFactElec?: string,
+    TelContactoFactElec?: string,
+    EmailContactoFactElec?: string,
+    EmailReciboContactoFactElec?: string,
+    CantidadLineasXFactura?: number,
+    TipoEntrega?: number,
+    AceptaDevoluc?: boolean,
+    OrdenCompra?: boolean,
+    DescuentoFijo?: boolean,
+    PorDescuentofijo?: number,
+    DescuentoConfidencial?: boolean,
+    PorcDescuentoConfidencial?: number,
+    DescuentoIntroduccion?: boolean,
+    PorcDescuentoIntroduccion?: number,
+    PartDinamicasComerciales?: boolean,
+    PartEspaciosPromocionales?: boolean,
+    PartDisplays?: boolean,
+    FrecuenciaVisitaTiendas?: number,
+    AportaCodigoCABYS?: boolean,
+    CodigoCABYS?: string,
+    ActividadEconomicaID?: number,
+    PlazoPagoID?: number,
+    DocEntregaFacElect?: boolean,
+    DocEntregaGuiaDespacho?: boolean
+
+  )
+  : Promise<any> {
+    const result = await API.post('gsone/createProveedorsol', {
+      
+        proveedor_id,
+        proveedor_dsc,
+        categoria_id,
+        CedJuridica  ,
+        RazonSocial  ,
+        RepreLegal  ,
+        GerenteGeneral  ,
+        GerenteVentas  ,
+        AgenteVentas  ,
+        ContactoFinanc  ,
+        Direccion  ,
+        canton_id ,
+        Barrio  ,
+        Tel1  ,
+        Tel2  ,
+        NombreContactoFactElec  ,
+        TelContactoFactElec  ,
+        EmailContactoFactElec  ,
+        EmailReciboContactoFactElec  ,
+        CantidadLineasXFactura  ,
+        TipoEntrega  ,
+        AceptaDevoluc  ,
+        OrdenCompra  ,
+        DescuentoFijo  ,
+        PorDescuentofijo  ,
+        DescuentoConfidencial  ,
+        PorcDescuentoConfidencial  ,
+        DescuentoIntroduccion  ,
+        PorcDescuentoIntroduccion  ,
+        PartDinamicasComerciales  ,
+        PartEspaciosPromocionales  ,
+        PartDisplays  ,
+        FrecuenciaVisitaTiendas  ,
+        AportaCodigoCABYS  ,
+        CodigoCABYS  ,
+        ActividadEconomicaID  ,
+        PlazoPagoID  ,
+        DocEntregaFacElect  ,
+        DocEntregaGuiaDespacho  
+
+
+    });
+    //alert(result.data)
+    return Promise.resolve(result.data);}
+
+    
+
+    async getProveedorsol(proveedor_id: number): Promise<Proveedorsol> {
+      const result = await API.get<GetProveedorsolResponse>('gsone/getProveedorsol', { params: { proveedor_id: proveedor_id } });
+      console.log('Proveedor solicitado', proveedor_id)
+      console.log(result)
+      return Promise.resolve(result.data.proveedor);
+    }
+
+    async getArticulo(ArticuloId: number): Promise<Articulo> {
+      console.log('artiparam',ArticuloId)
+      const result = await API.get<GetProductNewResponse>('gsone/getArticulo', { params: {ArticuloId : ArticuloId } });
+      console.log('resultado api',result.data.articulo)
+      return Promise.resolve(result.data.articulo);
+    }
+
+    async updateMensaje(
+      mensaje_id: number ,
+      UsuarioSend: string,
+      UsuarioRecep: string ,
+      msgMensajeRespuesta: string,
+      msgEliminado: boolean,        // true si no se acepta la cita
+      participantesCia: string,
+      status: string,
+      totalDestinos: string,
+      fechaCita?: string,
+      //fechaDefinitiva?: string ,
+
+    ): Promise<any> {
+      //alert(fechaCita)
+      //alert('Pare aqui')
+      const result = await API.patch<any>('gsone/updateMensaje', 
+      { 
+        mensaje_id,
+        UsuarioSend,
+        UsuarioRecep,
+        msgMensajeRespuesta,
+        msgEliminado,        // true si no se acepta la cita
+        participantesCia,
+        status,
+        totalDestinos,
+        fechaCita,
+        //fechaDefinitiva,
+      });
+      return Promise.resolve(result.data);
+    }
+
+    async createMensaje(
+      mensaje_id: number | null,
+      mensajeResp_id: number | null,
+      UsuarioSend: string,
+      UsuarioRecep: string | null,
+      msgDate: Date | null,
+      msgDateCita: string | null,
+      asunto_id: number | null,
+      msgMensaje: string,
+      msgMensajeRespuesta: string,
+      msgUsuarioRecepOk: boolean |null,
+      msgEliminado: boolean | null,
+      IdMensajeOriginal: number | null,
+      categoria_id: number,
+      participantes: string,
+      participantesCia: string,
+      tipoMensaje: string,
+      status: string,
+      foto: any,
+      titulo: string,
+      fechaCita: string,
+       ): Promise<any> {
+      const result = await API.post<any>('gsone/createMensaje', {
+        mensaje_id, mensajeResp_id,UsuarioSend,UsuarioRecep,msgDate,msgDateCita,
+        asunto_id,msgMensaje,msgMensajeRespuesta,msgUsuarioRecepOk,msgEliminado,
+        IdMensajeOriginal,categoria_id,participantes,participantesCia,tipoMensaje,status,foto,titulo,fechaCita
+      });
+      console.log('resultados data..........................:',mensaje_id,titulo,'FECHA CITA:',fechaCita)
+     
+      return Promise.resolve(result.data);}
+  
+      
+
+}
+
+export const productApi = new ProductsApi();
